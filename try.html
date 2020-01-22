@@ -208,6 +208,9 @@ fieldset {
 
 }
 
+
+
+
 </style>
 
 <body >
@@ -248,8 +251,8 @@ fieldset {
 Login</b>
 </legend>
 <br>
-<input class="inn1" id="username" type="text" placeholder="Username" required>
-<input class="inn1" id="pass_word" type="password"  data-toggle="popover" data-trigger="hover" data-content="Enter Password" placeholder="Password" required> 
+<input class="inn1" id="username" type="text" data-toggle="popover" data-trigger="hover" data-content="Enter Username" placeholder="Username" required>
+<input class="inn1" id="pass_word" type="password"  data-toggle="popover" data-trigger="hover" data-content="Enter Password" placeholder="Password" required>
 <br><br>
 <button class="bttn1" type="Submit" onclick="gg()"><b>Submit</b></button>
 <br>
@@ -403,6 +406,7 @@ function displayResults( tx, results ){
 		if(results.rows.length == 0) {
 			alert("username not available or incorrect password");
 			document.getElementsByClassName("inn1")[1].value="";
+			//document.getElementsByClassName("inn1")[1].setAttribute('data-content','new content');
 			return false;
 		}
 		document.getElementsByClassName("container")[0].style.display = "none";
