@@ -300,6 +300,9 @@ Registration</b>
 </form>
 </div>
 
+
+
+
 <script>
 
 $(document).ready(function(){
@@ -358,14 +361,14 @@ alert("Enter Valid DOB");
 return false
 }
 else {
-    
-<?php 
+
+/*
 
     $email = ema;
-	$hoddwst="localhost";
-	$dbusername="id12327853_root";
+	$host="localhost";
+	$dbusername="id12327853_p";
 	$dbpassword="12345";
-	$dbname="id12327853_practice";
+	$dbname="id12327853_root";
     
     $conn=new mysqli ($host ,$dbusername,$dbpassword,$dbname);
 	if(mysqli_connect_error())
@@ -391,7 +394,6 @@ else {
 		}
 ?>
 
-/*
 	db.transaction(
 			function(tx){
 				tx.executeSql( "SELECT * FROM test WHERE email = ?",[ema],checkmail)})
@@ -420,9 +422,18 @@ else {
 						tx.executeSql('INSERT INTO Test(f_name , l_name, email , password, Dob,register_date) VALUES (?,?,?,?,?,?)',[f,l,ema,pass,dob,Date()]);
 					});
 				}}
+				
 */
+
 }
 }
+
+
+
+
+
+
+
 
 function gg(){
 

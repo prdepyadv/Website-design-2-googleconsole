@@ -7,9 +7,9 @@ $dob=filter_input(INPUT_POST,'dob');
 
 
 	$host="localhost";
-	$dbusername="id12327853_root";
+	$dbusername="id12327853_p";
 	$dbpassword="12345";
-	$dbname="id12327853_practice";
+	$dbname="id12327853_root";
 	 
 	//connection
 
