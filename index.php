@@ -264,8 +264,9 @@ Login</b>
 </div>
 
 
+
 <div class="container">
-<form method="post" onsubmit="return(ff())" action="https://ppyy.000webhostapp.com/check.php">
+<form method="post" id="pform" onsubmit="return ff();" action="https://ppyy.000webhostapp.com/check.php">
 <fieldset>
 <legend><b>
 Registration</b>
@@ -305,11 +306,13 @@ Registration</b>
 
 <script>
 
+//stop here
+
 $(document).ready(function(){
     $('[data-toggle="popover"]').popover();   
 });
 
-var f1=0,f2=0,f3=0,f4=0;
+var f1=0,f2=0,f3=0,f4=0,flag=0;
 
 function ff() {
 
@@ -362,37 +365,27 @@ return false
 }
 else {
 
-/*
-
-    $email = ema;
-	$host="localhost";
-	$dbusername="id12327853_p";
-	$dbpassword="12345";
-	$dbname="id12327853_root";
-    
-    $conn=new mysqli ($host ,$dbusername,$dbpassword,$dbname);
-	if(mysqli_connect_error())
-	    {
-			die('Connect Error('.mysqli_connect_errno().')'.mysqli_connect_error());
-	    }
-	else
-		{
-			$sql_e = "SELECT * FROM Test WHERE email = '".$email."'";
-			$result_e = mysqli_query($conn,$sql_e);
-			if(mysqli_num_rows($result_e)>0)
-				{
-					alert("Sorry Email already taken");
-				    $conn->close();
-                    die();
+$("#pform").submit(function( event ){
+event.preventDefault();
+        $.ajax({
+            url: 'https://ppyy.000webhostapp.com/script.php',
+            type: 'post',
+            data: {ema : ema},
+            success: function(response){
+                if(response){
+                    alert("email exist");
                     return false;
-				}
-			else{
-			    $conn->close();
-                die();
-			    return true;
-			}
-		}
-?>
+                }
+                else{
+                    alert("all well");
+                    return true;
+                }
+            }
+         });
+    return false;
+});
+    
+/*
 
 	db.transaction(
 			function(tx){
@@ -427,11 +420,6 @@ else {
 
 }
 }
-
-
-
-
-
 
 
 
@@ -487,6 +475,9 @@ document.getElementsByClassName("bttn")[0].style.border = "solid green";
 }
 }
 
+
+
+
 function mi(){
 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 var ema = document.getElementsByClassName("inn")[2];
@@ -494,14 +485,16 @@ if(ema.value.match(mailformat)){
 ema.style.borderBottom = "solid #00FF00";
 f2=1;
 }
-else{
+else if(! ema.value.match(mailformat)){
 ema.style.borderBottom = "solid black";
 f2=0;
 }
+         
 if(f1==1 && f2==1 && f3==1 && f4==1){
 document.getElementsByClassName("bttn")[0].style.border = "solid green";
 }
 }
+
 
 function funct(){
 var pass = document.getElementsByClassName("inn")[3].value;
@@ -540,6 +533,7 @@ document.getElementsByClassName("bttn")[0].style.border = "solid green";
 }
 
 function tt() {
+
 document.getElementsByClassName("container")[0].style.display = "none";
 document.getElementsByClassName("login")[0].style.display = "block";
 document.getElementsByClassName("check")[0].style.display = "none";
