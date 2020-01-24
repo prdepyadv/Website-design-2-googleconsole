@@ -245,7 +245,7 @@ fieldset {
 
 <div class="login">
 <br>
-<form onsubmit="return(gg())" action="#">
+<form onsubmit="return gg();" action="https://ppyy.000webhostapp.com/success.php">
 <fieldset>
 <legend><b>
 Login</b>
@@ -365,7 +365,7 @@ return false
 }
 else {
     
-return ajax();
+return email_validate();
 
 
 /*
@@ -404,13 +404,13 @@ return ajax();
 }
 }
 
-function ajax(){
+function email_validate(){
     
 var ema = document.getElementsByClassName("inn")[2].value;
 
 var temp;
         $.ajax({
-            url: 'https://ppyy.000webhostapp.com/script.php',
+            url: 'https://ppyy.000webhostapp.com/email_val.php',
             type: 'post',
             async: false,
             data: {'email' : ema},
@@ -448,7 +448,11 @@ alert("Enter valid credentials");
 document.getElementsByClassName("inn")[0].focus();
 return false
 }
+else {
+    
+return login_validate(user,pas);
 
+/*
 db.transaction(
 		function(tx){
 			tx.executeSql( "SELECT * FROM test WHERE email = ? and password = ?",[user,pas],displayResults)})
@@ -467,11 +471,44 @@ function displayResults( tx, results ){
 		document.getElementById("ch1").innerHTML = "Name : "+results.rows[0]["f_name"]+" "+results.rows[0]["l_name"];
 		document.getElementById("ch3").innerHTML = "Email : "+results.rows[0]["email"];
 		document.getElementById("ch5").innerHTML = "Date of Birth : "+results.rows[0]["Dob"];
-
 		document.getElementById("wel").innerHTML = "Welcome, "+results.rows[0]["f_name"];
+		
+}
+*/
 
+    
 }
 }
+
+function login_validate(user,pas){
+    
+var temp;
+
+        $.ajax({
+            url: 'https://ppyy.000webhostapp.com/login.php',
+            type: 'post',
+            async: false,
+            data: {'email' : user,'password': pas},
+            success: function(response)
+            {
+                if(response == '0'){
+                    alert("username not available or incorrect password")
+                    document.getElementsByClassName("inn1")[1].value="";
+                    temp=false;
+                }
+                else if(response == '1'){
+                    alert("success");
+                    temp=true;
+                }
+            },
+            error: function(result){
+                return false;
+            }
+        });
+    return temp;   
+}
+
+
 
 function firs(){
 var letters = /^[A-Za-z]+$/;
