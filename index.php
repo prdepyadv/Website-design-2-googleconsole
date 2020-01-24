@@ -441,7 +441,7 @@ function gg(){
 
 var user = document.getElementById("username").value;
 var pas = document.getElementById("pass_word").value;
-var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+
 
 if(user.length < 3 || pas.length < 8){
 alert("Enter valid credentials");
@@ -450,9 +450,11 @@ return false
 }
 else {
     
-return login_validate(user,pas);
+return login_validate();
 
 /*
+var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+
 db.transaction(
 		function(tx){
 			tx.executeSql( "SELECT * FROM test WHERE email = ? and password = ?",[user,pas],displayResults)})
@@ -475,14 +477,15 @@ function displayResults( tx, results ){
 		
 }
 */
-
     
 }
 }
 
-function login_validate(user,pas){
-    
-var temp;
+function login_validate(){
+
+var user = document.getElementById("username").value;
+var pas = document.getElementById("pass_word").value; 
+var temp1;
 
         $.ajax({
             url: 'https://ppyy.000webhostapp.com/login.php',
@@ -494,18 +497,17 @@ var temp;
                 if(response == '0'){
                     alert("username not available or incorrect password")
                     document.getElementsByClassName("inn1")[1].value="";
-                    temp=false;
+                    temp1=false;
                 }
                 else if(response == '1'){
-                    alert("success");
-                    temp=true;
+                    temp1=true;
                 }
             },
             error: function(result){
                 return false;
             }
         });
-    return temp;   
+    return temp1;   
 }
 
 
