@@ -364,27 +364,10 @@ alert("Enter Valid DOB");
 return false
 }
 else {
-
-$("#pform").submit(function( event ){
-event.preventDefault();
-        $.ajax({
-            url: 'https://ppyy.000webhostapp.com/script.php',
-            type: 'post',
-            data: {ema : ema},
-            success: function(response){
-                if(response){
-                    alert("email exist");
-                    return false;
-                }
-                else{
-                    alert("all well");
-                    return true;
-                }
-            }
-         });
-    return false;
-});
     
+return ajax();
+
+
 /*
 
 	db.transaction(
@@ -421,7 +404,38 @@ event.preventDefault();
 }
 }
 
+function ajax(){
+    
+var ema = document.getElementsByClassName("inn")[2].value;
 
+var temp;
+        $.ajax({
+            url: 'https://ppyy.000webhostapp.com/script.php',
+            type: 'post',
+            async: false,
+            data: {'email' : ema},
+            
+            success: function(response)
+            {
+                
+                
+                if(response>0){
+                    alert("email exist")
+                    document.getElementsByClassName("inn")[2].style.borderBottom = "solid black";
+                    temp=false;
+                }
+                else{
+                   
+                    temp=true;
+                }
+            },
+            error: function(result){
+                
+                return false;
+            }
+        });
+    return temp;
+}
 
 function gg(){
 
