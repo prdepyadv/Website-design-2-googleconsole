@@ -1,0 +1,3 @@
+CREATE TABLE Test ( id int NOT NULL AUTO_INCREMENT, first varchar(255),last varchar(255),email va
+rchar(255),password varchar(255),dob varchar(255),register_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,Phon
+e varchar(255) Default NULL, PRIMARY KEY (id) );
