@@ -23,7 +23,7 @@ $dob=filter_input(INPUT_POST,'dob');
 					$sql="INSERT INTO Test(first,last,email,password,dob) VALUES ('$first','$last','$email','$password','$dob')";
 						if($conn->query($sql))
 						{
-							echo "<script>alert('success')</script>","<script>window.location.replace('https://ppyy.000webhostapp.com/success.php')</script>";
+							echo "<script>alert('success')</script>","<script>window.location.replace('https://ppyy.000webhostapp.com/')</script>";
 						}
 						else
 						{

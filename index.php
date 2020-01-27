@@ -120,7 +120,7 @@ input[type=text],input[type=email] ,input[type=password] ,input[type=date]  {
   padding: 30px;
   width : 40%;
   align: center;
-  display : block;
+  display : none;
   
 }
 
@@ -145,7 +145,7 @@ input[type=text],input[type=email] ,input[type=password] ,input[type=date]  {
   width : 40%;
   margin-left: auto ;
   margin-right: auto ;
-  display: none;
+  display: block;
   font-family: 'Gelasio', serif;
 
 }
@@ -225,7 +225,7 @@ fieldset {
 	<a class="top pp"href="www.google.com" title="Video">Video</a>
 	<a class="top pp"href="www.google.com" title="File">File</a>
 	<a class="top pp"href="www.google.com" title="Contact Us">Contact Us</a>
-	<a class="top pp" id="wel" style="float:right" href="#" onclick="tt()">Account</a>
+	<a class="top pp" id="wel" style="float:right" href="#" onclick="tt()"></a>
 	
 
 </div>
@@ -245,16 +245,16 @@ fieldset {
 
 <div class="login">
 <br>
-<form onsubmit="return gg();" action="https://ppyy.000webhostapp.com/success.php">
+<form method="post" onsubmit="return gg();" action="https://ppyy.000webhostapp.com/success.php">
 <fieldset>
 <legend><b>
 Login</b>
 </legend>
 <br>
-<input class="inn1" id="username" type="text" data-toggle="popover" data-trigger="hover" data-content="Enter Username" placeholder="Username" required>
+<input class="inn1" name="email" id="username" type="text" data-toggle="popover" data-trigger="hover" data-content="Enter Username" placeholder="Username" required>
 <input class="inn1" id="pass_word" type="password"  data-toggle="popover" data-trigger="hover" data-content="Enter Password" placeholder="Password" required>
 <br><br>
-<button class="bttn1" type="Submit" onclick="gg()"><b>Submit</b></button>
+<button class="bttn1" type="Submit"><b>Submit</b></button>
 <br>
 <br>
 <h4>Not registered yet? <a onclick="uu();">Sign up now!</a></h4>
@@ -590,7 +590,6 @@ function tt() {
 document.getElementsByClassName("container")[0].style.display = "none";
 document.getElementsByClassName("login")[0].style.display = "block";
 document.getElementsByClassName("check")[0].style.display = "none";
-document.getElementById("wel").innerHTML = "Account";
 document.getElementsByClassName("inn1")[1].value="";
 
 }
