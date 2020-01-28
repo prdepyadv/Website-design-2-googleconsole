@@ -346,7 +346,7 @@ var img = document.getElementsByName("image")[0];
 var temp;
 
         $.ajax({
-            url: 'http://34.69.140.33/Website-design-2/image_update.php',
+            url: 'http://34.69.140.33/Website-design-2/image_upload.php',
             type: 'post',
             async: false,
             data: {'image' : img},
