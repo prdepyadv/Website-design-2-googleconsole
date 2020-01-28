@@ -16,7 +16,7 @@ $host="34.69.140.33";$dbusername="rooot";$dbpassword="Prdep@123";$dbname="practi
 		{
 		$random_digit=rand(0000,9999);
 		$new_file_name=$random_digit.$file_name;
-		path= "upload/".$new_file_name;
+		$path= "upload/".$new_file_name;
             $sql="UPDATE Test SET image_path = '".$new_file_name."' WHERE email = '".$email."';";
 		
 					if($conn->query($sql))
