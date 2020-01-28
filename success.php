@@ -352,11 +352,8 @@ var temp=false;
             data: {'email' : "<?php echo $email ?>",'image' : img},
             success: function(response)
             {
-		 console.log(response);
-		if(response == true)
-		{
+		console.log(response);
                 temp=true;
-            	}
 	    },
             error: function(result){
 		     console.log(response);
