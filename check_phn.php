@@ -1,7 +1,7 @@
 <?php
 
 	$email = $_POST["email"];
-if(! isset($email))
+if(isset($email))
 {
 	$host="34.69.140.33";
 	$dbusername="rooot";
