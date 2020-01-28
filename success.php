@@ -254,7 +254,7 @@ Update info (2/2)
 <br>
 <p id="label" >Upload profile pic </p>
 <br>
-<input id="file" type="file" name="pic" required>
+<input id="file" type="file" name="pic" accept="image/*" required>
 <br>
 <br>
 <button class="bttn1" type="submit">Submit</button>
