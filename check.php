@@ -5,7 +5,8 @@ $email=filter_input(INPUT_POST,'email');
 $password=filter_input(INPUT_POST,'password');
 $dob=filter_input(INPUT_POST,'dob');
 
-
+if(isset($email) and isset($password))
+{
 	$host="34.69.140.33";
 	$dbusername="rooot";
 	$dbpassword="Prdep@123";
@@ -31,5 +32,10 @@ $dob=filter_input(INPUT_POST,'dob');
 						}
 						$conn->close();
 				}
+}
+else
+{
+echo "<script>alert('error')</script>","<script>window.location.replace('http://34.69.140.33/Website-design-2/index.php')</script>";
+}
 die();
 ?>
