@@ -254,7 +254,7 @@ Update info (2/2)
 <br>
 <p id="label" >Upload profile pic </p>
 <br>
-<input id="file" type="file" name="pic" accept="image/*" required>
+<input id="file" type="file" name="pic" required>
 <br>
 <br>
 <button class="bttn1" type="submit">Submit</button>
@@ -341,7 +341,7 @@ return false;
 }
 function image_up(){
 	
-var img = document.getElementsByName("image")[0];
+var img = document.getElementsByName("pic")[0];
 var temp=false;
 
         $.ajax({
