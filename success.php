@@ -356,7 +356,7 @@ var temp=false;
                 temp=true;
 	    },
             error: function(result){
-		     console.log(response);
+		     console.log(result);
                 return false;
             }
         });
