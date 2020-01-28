@@ -2,11 +2,10 @@
 
 	$phone = $_POST["phone"];
 	$email = $_POST["email"];
-	$host="localhost";
-	$dbusername="id12327853_p";
-	$dbpassword="12345";
-	$dbname="id12327853_root";
-    
+
+
+$host="34.69.140.33";$dbusername="rooot";$dbpassword="Prdep@123";$dbname="practice";
+
     $conn=new mysqli ($host ,$dbusername,$dbpassword,$dbname);
 	if(mysqli_connect_error())
 	    {

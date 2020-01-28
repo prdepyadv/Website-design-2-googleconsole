@@ -215,7 +215,7 @@ fieldset {
 	<a class="top pp"href="www.google.com" title="Video">Video</a>
 	<a class="top pp"href="www.google.com" title="File">File</a>
 	<a class="top pp"href="www.google.com" title="Contact Us">Contact Us</a>
-	<a class="top pp" id="wel" style="float:right" href="https://ppyy.000webhostapp.com/">Sign Out</a>
+	<a class="top pp" id="wel" style="float:right" href="http://34.69.140.33/Website-design-2/index.php">Sign Out</a>
 	
 
 </div>
@@ -269,7 +269,7 @@ Update info (2/2)
 <script>
 
         $.ajax({
-            url: 'https://ppyy.000webhostapp.com/check_phn.php',
+            url: 'http://34.69.140.33/Website-design-2/check_phn.php',
             type: 'post',
             async: false,
             data: {'email' : "<?php echo $email ?>"},
@@ -303,7 +303,7 @@ var phone = document.getElementsByClassName("inn")[0].value;
 var temp;
 
         $.ajax({
-            url: 'https://ppyy.000webhostapp.com/phone_upd.php',
+            url: 'http://34.69.140.33/Website-design-2/phone_upd.php',
             type: 'post',
             async: false,
             data: {'email' : "<?php echo $email ?>", 'phone' : phone},

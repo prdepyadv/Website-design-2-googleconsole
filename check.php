@@ -6,10 +6,10 @@ $password=filter_input(INPUT_POST,'password');
 $dob=filter_input(INPUT_POST,'dob');
 
 
-	$host="localhost";
-	$dbusername="id12327853_p";
-	$dbpassword="12345";
-	$dbname="id12327853_root";
+	$host="34.69.140.33";
+	$dbusername="rooot";
+	$dbpassword="Prdep@123";
+	$dbname="practice";
 	 
 	//connection
 
@@ -23,7 +23,7 @@ $dob=filter_input(INPUT_POST,'dob');
 					$sql="INSERT INTO Test(first,last,email,password,dob) VALUES ('$first','$last','$email','$password','$dob')";
 						if($conn->query($sql))
 						{
-							echo "<script>alert('success')</script>","<script>window.location.replace('https://ppyy.000webhostapp.com/')</script>";
+							echo "<script>alert('success')</script>","<script>window.location.replace('http://34.69.140.33/Website-design-2/index.php')</script>";
 						}
 						else
 						{
