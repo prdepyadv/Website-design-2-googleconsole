@@ -341,7 +341,7 @@ return false;
 }
 function image_up(){
 	
-var img = document.getElementsByName("pic")[0];
+var img = document.getElementsByName("image")[0];
 var temp=false;
 
         $.ajax({
