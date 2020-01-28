@@ -1,6 +1,7 @@
 <?php
 
     $check = getimagesize($_FILES["image"]["tmp_name"]);
+console.log($check);
     if($check !== false){
         $image = $_FILES['image']['tmp_name'];
         $imgContent = addslashes(file_get_contents($image));
