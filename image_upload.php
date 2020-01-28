@@ -28,7 +28,7 @@
         $insert = $db->query("INSERT into images (image, created) VALUES ('$imgContent', '$dataTime')");
         if($insert)
         {
-            echo "File uploaded successfully.";
+            echo 1;
         }
 		else
 		{
