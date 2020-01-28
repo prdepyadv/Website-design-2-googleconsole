@@ -2,6 +2,7 @@
 
 	$email = $_POST["email"];
 	$file_name=$_FILES['pic']['name'];
+	echo $file_name;
 
 if(isset($email)){
 
