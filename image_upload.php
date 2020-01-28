@@ -1,6 +1,5 @@
 <?php
 
-if(isset($_POST["submit"])){
     $check = getimagesize($_FILES["image"]["tmp_name"]);
     if($check !== false){
         $image = $_FILES['image']['tmp_name'];
@@ -30,10 +29,9 @@ if(isset($_POST["submit"])){
         if($insert){
             echo "File uploaded successfully.";
         }else{
-            echo "File upload failed, please try again.";
+            echo 0;
         } 
     }else{
-        echo "Please select an image file to upload.";
+        echo 0;
     }
-}
 ?>
