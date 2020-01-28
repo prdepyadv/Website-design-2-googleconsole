@@ -1,7 +1,7 @@
 <?php
 
-	$email = $_POST["email"];
-	$password = $_POST["password"];
+	$email = mysqli_real_escape_string($_POST["email"]);
+	$password = mysqli_real_escape_string($_POST["password"]);
 		
 if(isset($email) and isset($password))
 {
