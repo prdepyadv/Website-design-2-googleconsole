@@ -26,12 +26,14 @@
         
         //Insert image content into database
         $insert = $db->query("INSERT into images (image, created) VALUES ('$imgContent', '$dataTime')");
-        if($insert){
+        if($insert)
+        {
             echo "File uploaded successfully.";
-        }else{
-            echo 0;
-        } 
-    }else{
-        echo 0;
+        }
+		else
+		{
+			echo "Error: ".$sql."<br>".$conn->error;
+		}
+						$conn->close();
     }
 ?>
