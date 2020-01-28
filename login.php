@@ -2,6 +2,8 @@
 
 	$email = real_escape_string($_POST["email"]);
 	$password = real_escape_string($_POST["password"]);
+		
+		
 if(isset($email) and isset($password))
 {
 
