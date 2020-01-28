@@ -326,6 +326,7 @@ function hidecont2(){
     
         
 	if(image_up()){
+		alert("image uploaded");
 	document.getElementsByClassName("container")[0].style.display = "none";
           document.getElementsByClassName("container_two")[0].style.display = "none";
         document.getElementsByClassName("main_cont")[0].style.display = "block";
