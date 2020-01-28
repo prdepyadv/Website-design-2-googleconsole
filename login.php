@@ -1,9 +1,9 @@
 <?php
 
-
-
 $email = $_POST['email']; 
 $password = $_POST['password'];
+
+$password = str_replace(''', ' ', $paasword);
 
 if(isset($email) and isset($password))
 {
