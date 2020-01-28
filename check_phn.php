@@ -27,6 +27,9 @@ if(isset($email))
 		}
    
 }
+else{
+echo "<script>alert('error')</script>","<script>window.location.replace('http://34.69.140.33/Website-design-2/index.php')</script>";
+}
 die();	
 
 ?>
