@@ -324,15 +324,43 @@ var temp;
 
 function hidecont2(){
     
-         document.getElementsByClassName("container")[0].style.display = "none";
+        
+	if(image_up()){
+	document.getElementsByClassName("container")[0].style.display = "none";
           document.getElementsByClassName("container_two")[0].style.display = "none";
         document.getElementsByClassName("main_cont")[0].style.display = "block";
-        return false;
-    
+	}
+	else{
+	alert("something went wrong");
+	document.getElementsByClassName("container")[0].style.display = "none";
+          document.getElementsByClassName("container_two")[0].style.display = "none";
+        document.getElementsByClassName("main_cont")[0].style.display = "block";
+	}
+return false;
     
 }
+function image_up(){
+	
+var img = document.getElementsByName("image")[0];
+var temp;
 
-
+        $.ajax({
+            url: 'http://34.69.140.33/Website-design-2/image_update.php',
+            type: 'post',
+            async: false,
+            data: {'image' : img},
+            success: function(response)
+            {
+                temp=true;
+            },
+            error: function(result){
+                return false;
+            }
+        });
+    return temp;
+	
+}
+	
 </script>
 </body>
 </html>
