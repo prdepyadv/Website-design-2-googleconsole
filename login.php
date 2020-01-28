@@ -3,9 +3,8 @@
 $email = $_POST['email']; 
 $password = $_POST['password'];
 
-$password = str_replace(''', ' ', $password);
 
-if(isset($email) and isset($password))
+if(isset($email) or isset($password))
 {
 	$host="34.69.140.33";$dbusername="rooot";$dbpassword="Prdep@123";$dbname="practice";
 	$conn=new mysqli ($host ,$dbusername,$dbpassword,$dbname);
