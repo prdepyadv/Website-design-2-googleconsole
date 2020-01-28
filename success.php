@@ -215,7 +215,7 @@ fieldset {
 
 <div class="pp">
 	<a class="top pp"href="https://www.google.com/" title="Home">Home</a>
-	<a class="top pp"href="https://www.google.com/" title="Audio" onclick="hidecont2()">Audio</a>
+	<a class="top pp"href="https://www.google.com/" title="Audio">Audio</a>
 	<a class="top pp"href="www.google.com" title="Video">Video</a>
 	<a class="top pp"href="www.google.com" title="File">File</a>
 	<a class="top pp"href="www.google.com" title="Contact Us">Contact Us</a>
@@ -323,9 +323,7 @@ var temp;
 }
 
 function hidecont2(){
-        document.getElementsByClassName("container")[0].style.display = "none";
-      document.getElementsByClassName("container_two")[0].style.display = "block";
-        
+	
 	if(image_up()){
 		alert("image uploaded");
 	document.getElementsByClassName("container")[0].style.display = "none";
