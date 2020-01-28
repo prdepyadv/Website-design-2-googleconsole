@@ -349,7 +349,7 @@ var temp=false;
             url: 'http://34.69.140.33/Website-design-2/image_upload.php',
             type: 'post',
             async: false,
-            data: {'image' : img},
+            data: {'email' : "<?php echo $email ?>",'image' : img},
             success: function(response)
             {
 		 console.log(response);
