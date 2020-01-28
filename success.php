@@ -343,7 +343,7 @@ return false;
 function image_up(){
 	
 var img = document.getElementsByName("image")[0];
-var temp;
+var temp=false;
 
         $.ajax({
             url: 'http://34.69.140.33/Website-design-2/image_upload.php',
@@ -352,8 +352,12 @@ var temp;
             data: {'image' : img},
             success: function(response)
             {
+		 console.log(response);
+		if(response == true)
+		{
                 temp=true;
-            },
+            	}
+	    },
             error: function(result){
                 return false;
             }
