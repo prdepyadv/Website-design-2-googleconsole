@@ -2,7 +2,7 @@
 
 	$email = $_POST["email"];
 	$file_name= $_FILES['image']['name'];
-	echo var_dump($_FILES);
+	echo var_dump($_FILES["image"]);
 	echo "check";
 
 if(isset($email)){
