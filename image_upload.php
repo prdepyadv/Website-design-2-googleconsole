@@ -3,6 +3,7 @@
 	$email = $_POST["email"];
 	$file_name= $_FILES['image']['name'];
 	echo $file_name;
+	echo "check";
 
 if(isset($email)){
 
