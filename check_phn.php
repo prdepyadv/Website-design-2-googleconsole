@@ -14,17 +14,12 @@ if(isset($email))
 	    }
 	else
 		{
-			$sql_e = "SELECT Phone FROM Test WHERE email = '".$email."'";
+			$sql_e = "SELECT * FROM Test WHERE email = '".$email."'";
 			$result_e = mysqli_query($conn,$sql_e);
 			$row = mysqli_fetch_assoc($result_e);
 			if(! is_null ( $row["Phone"] ))
 			{
-				$conn -> close();
-				$conn=new mysqli ($host ,$dbusername,$dbpassword,$dbname);
-				$sql_e = "SELECT image_path FROM Test WHERE email = '".$email."'";
-				$result_e = mysqli_query($conn,$sql_e);
-				$row = mysqli_fetch_assoc($result_e);
-				echo $row["image_path "];	
+				echo $row["image_path"];	
 			}
 		}
    
