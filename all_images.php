@@ -1,5 +1,8 @@
 <?php
 
+$email = $_Post["email"];
+
+if(isset($email)){
 $host="34.69.140.33";
 $dbusername="rooot";
 $dbpassword="Prdep@123";
@@ -15,7 +18,8 @@ $conn=new mysqli ($host ,$dbusername,$dbpassword,$dbname);
 			$sql_e = "SELECT image_path FROM Test";
 			$result_e = mysqli_query($conn,$sql_e);
 		        while ($row = mysqli_fetch_assoc($result_e)) {
-       	 			echo -e "/Website-design-2/uploads/".$row["image_path"];
+       	 			echo "/Website-design-2/uploads/".$row["image_path"];
 			}
 	}
+}
 ?>
