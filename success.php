@@ -280,11 +280,13 @@ Update info (2/2)
             data: {'email' : "<?php echo $email ?>"},
             success: function(response)
             {
-        document.getElementsByClassName("container")[0].style.display = "none";
-         document.getElementsByClassName("container_two")[0].style.display = "none";
-        document.getElementsByClassName("main_cont")[0].style.display = "block";
-		    document.getElementsByClassName("imgg")[0].src = response;
-            }
+        	if(response){
+			document.getElementsByClassName("container")[0].style.display = "none";
+			document.getElementsByClassName("container_two")[0].style.display = "none";
+			document.getElementsByClassName("main_cont")[0].style.display = "block";
+			document.getElementsByClassName("imgg")[0].src = response;
+            			}
+	    }
         });
         
 
