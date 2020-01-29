@@ -284,7 +284,6 @@ Update info (2/2)
          document.getElementsByClassName("container_two")[0].style.display = "none";
         document.getElementsByClassName("main_cont")[0].style.display = "block";
 		    document.getElementsByClassName("imgg")[0].src = "/Website-design-2/uploads/"+response;
-		    console.log(response);
             }
         });
         
