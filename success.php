@@ -340,16 +340,21 @@ return false;
     
 }
 function image_up(){
-	
-var img = document.getElementsByName("pic")[0];
+
+var form = $('#pform1')[0];
+var data = new FormData(form);
+data.append("email","<?php echo $email ?>");
 var temp=false;
 
         $.ajax({
             url: 'http://34.69.140.33/Website-design-2/image_upload.php',
             type: 'post',
-	    contentType: 'multipart/form-data',
+	    enctype : 'multipart/form-data',
             async: false,
-            data: {'email' : "<?php echo $email ?>",'image' : img},
+            data: data,
+	    processData: false,
+            contentType: false,
+            cache: false,
             success: function(response)
             {
 		console.log(response);
