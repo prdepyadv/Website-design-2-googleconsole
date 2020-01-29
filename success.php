@@ -283,7 +283,7 @@ Update info (2/2)
         document.getElementsByClassName("container")[0].style.display = "none";
          document.getElementsByClassName("container_two")[0].style.display = "none";
         document.getElementsByClassName("main_cont")[0].style.display = "block";
-		    document.getElementsByClassName("imgg")[0].src = response;
+		    document.getElementsByClassName("imgg")[0].src = "/var/www/html/Website-design-2/uploads/"+response;
 		    console.log(response);
             }
         });
