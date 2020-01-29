@@ -19,7 +19,7 @@ if(isset($email))
 			$row = mysqli_fetch_assoc($result_e);
 			if(! is_null ( $row["Phone"] ))
 			{
-				echo $row["image_path"];	
+				echo "/Website-design-2/uploads/".$row["image_path"];	
 			}
 		}
    
