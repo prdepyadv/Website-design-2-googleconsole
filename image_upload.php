@@ -3,9 +3,7 @@
 	$email = $_POST["email"];
 	$file_name= $_FILES['image']['name'];
 
-if(isset($email)){
-
-$host="34.69.140.33";$dbusername="rooot";$dbpassword="Prdep@123";$dbname="practice";
+	$host="34.69.140.33";$dbusername="rooot";$dbpassword="Prdep@123";$dbname="practice";
 
     $conn=new mysqli ($host ,$dbusername,$dbpassword,$dbname);
 	if(mysqli_connect_error())
@@ -30,10 +28,5 @@ $host="34.69.140.33";$dbusername="rooot";$dbpassword="Prdep@123";$dbname="practi
 			$conn->close();
 	}
 	 die();
-}
-else{
-echo "<script>alert('error')</script>","<script>window.location.replace('http://34.69.140.33/Website-design-2/index.php')</script>";
- die();
-}
   
 ?>
