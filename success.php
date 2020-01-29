@@ -135,8 +135,11 @@ margin-left: auto ;
   align: center;
   display: none;
   text-align : center;
-
 }
+	
+.image_cont{
+	display: none;
+	}
 
 legend {
     font-size:  1.3em;
@@ -219,8 +222,8 @@ fieldset {
 <div class="pp">
 	<a class="top pp"href="https://www.google.com/" title="Home">Home</a>
 	<a class="top pp"href="https://www.google.com/" title="Audio">Audio</a>
-	<a class="top pp" title="Video">Video</a>
-	<a class="top pp" onclick="image_c()" title="File">File</a>
+	<a class="top pp" onclick='all_image_show()' title="Video">Video</a>
+	<a class="top pp" onclick="image_change()" title="File">File</a>
 	<a class="top pp"href="www.google.com" title="Contact Us">Contact Us</a>
 	<a class="top pp" id="wel" style="float:right" href="http://34.69.140.33/Website-design-2/index.php">Sign Out</a>
 	
@@ -275,6 +278,20 @@ Update info (2/2)
 </form>
 </div>
 
+<div id="image_div" class="image_cont">
+	<div class="row"> 
+  		<div class="column">
+			
+	  	</div>
+		 <div class="column">
+			
+	  	</div>
+		 <div class="column">
+
+	  	</div>
+	</div>
+</div>
+	
 <script>
 
         $.ajax({
@@ -373,11 +390,20 @@ var temp=false;
 	
 }
 	
-function image_c(){
+function image_change(){
         document.getElementsByClassName("container")[0].style.display = "none";
          document.getElementsByClassName("container_two")[0].style.display = "block";
         document.getElementsByClassName("main_cont")[0].style.display = "none";
 
+}
+	
+function all_image_show(){
+  var x = document.getElementById("image_div");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }	
 }
 	
 </script>
