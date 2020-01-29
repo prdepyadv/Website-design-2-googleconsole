@@ -349,7 +349,6 @@ var temp=false;
             type: 'post',
             async: false,
             data: {'email' : "<?php echo $email ?>",'image' : img},
-		alert('run'),
             success: function(response)
             {
 		console.log(response);
