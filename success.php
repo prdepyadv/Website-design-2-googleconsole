@@ -413,6 +413,7 @@ function all_image_show()
 				    url: 'http://34.69.140.33/Website-design-2/all_images.php',
 				    type: 'post',
 				    async: false,
+				    data: {'email' : "<?php echo $email ?>"},
 				    success: function(response)
 				    {	
 					 console.log(response);
