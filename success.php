@@ -267,7 +267,7 @@ Update info (2/2)
 
 <h1 >Welcome,</h1>
 <br>
-<img src="/var/www/html/Website-design-2/uploads/2205-background-4232859_1280.png" style="width:40px;height:40px">
+<img src="/var/www/html/Website-design-2/uploads/2205-background-4232859_1280.png" class="imgg" style="width:40px;height:40px">
 </form>
 </div>
 
@@ -280,11 +280,11 @@ Update info (2/2)
             data: {'email' : "<?php echo $email ?>"},
             success: function(response)
             {
-                if(response == 0){
         document.getElementsByClassName("container")[0].style.display = "none";
          document.getElementsByClassName("container_two")[0].style.display = "none";
         document.getElementsByClassName("main_cont")[0].style.display = "block";
-                }
+		    document.getElementsByClassName("imgg")[0].src = response;
+		    console.log(response);
             }
         });
         
