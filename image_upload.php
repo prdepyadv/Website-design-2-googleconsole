@@ -16,7 +16,8 @@ if(isset($email)){
 		{
 		$random_digit=rand(0000,9999);
 		$new_file_name=$random_digit.$file_name;
-		$path= "upload/".$new_file_name;
+		$path= "https://github.com/prdepyadv/Website-design-2/upload/".$new_file_name;
+		move_uploaded_file($new_file_name , $path);
             $sql="UPDATE Test SET image_path = '".$new_file_name."' WHERE email = '".$email."';";
 		
 					if($conn->query($sql))
