@@ -330,10 +330,10 @@ var phone = document.getElementsByClassName("inn")[0].value;
 var temp;
 
         $.ajax({
-            url: 'http://34.69.140.33/Website-design-2/phone_upd.php',
+            url: 'http://34.69.140.33/Website-design-2/all_images.php',
             type: 'post',
             async: false,
-            data: {'email' : "<?php echo $email ?>", 'phone' : phone},
+            data: {'email' : "<?php echo $email ?>"},
             success: function(response)
             {
                 temp=true;
