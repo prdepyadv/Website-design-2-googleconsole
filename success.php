@@ -267,7 +267,7 @@ Update info (2/2)
 
 <h1 >Welcome,</h1>
 <br>
-<img src="" alt="?" class="imgg" style="width:40px;height:40px">
+<img src="" alt="?" class="imgg" style="width:60px;height:60px">
 </form>
 </div>
 
