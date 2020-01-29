@@ -347,6 +347,7 @@ var temp=false;
         $.ajax({
             url: 'http://34.69.140.33/Website-design-2/image_upload.php',
             type: 'post',
+	    contentType: 'multipart/form-data',
             async: false,
             data: {'email' : "<?php echo $email ?>",'image' : img},
             success: function(response)
