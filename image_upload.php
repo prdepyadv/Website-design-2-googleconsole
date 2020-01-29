@@ -15,7 +15,7 @@ if(isset($email)){
 	else
 		{
 		$random_digit=rand(0000,9999);
-		$new_file_name=$random_digit.$file_name;
+		$new_file_name=$random_digit.'-'.$file_name;
 		$path= "/home/varun544v/".$new_file_name;
 		if(move_uploaded_file($_FILES['pic']['tmp_name'] , $path))
 		{echo "The file has been uploaded.";}
