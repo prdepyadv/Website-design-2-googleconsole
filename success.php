@@ -222,7 +222,7 @@ fieldset {
 <div class="pp">
 	<a class="top pp"href="https://www.google.com/" title="Home">Home</a>
 	<a class="top pp"href="https://www.google.com/" title="Audio">Audio</a>
-	<a class="top pp" onclick='all_image_show()' title="Video">Video</a>
+	<a class="top pp" onclick='all_image_show()' title="Store">Video</a>
 	<a class="top pp" onclick="image_change()" title="File">File</a>
 	<a class="top pp"href="www.google.com" title="Contact Us">Contact Us</a>
 	<a class="top pp" id="wel" style="float:right" href="http://34.69.140.33/Website-design-2/index.php">Sign Out</a>
@@ -391,6 +391,7 @@ var temp=false;
 }
 	
 function image_change(){
+	
         document.getElementsByClassName("container")[0].style.display = "none";
          document.getElementsByClassName("container_two")[0].style.display = "block";
         document.getElementsByClassName("main_cont")[0].style.display = "none";
