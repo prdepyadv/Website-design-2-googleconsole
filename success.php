@@ -356,7 +356,6 @@ var temp=false;
             cache: false,
             success: function(response)
             {
-		console.log(response);
                 temp=true;
 	    },
             error: function(result){
