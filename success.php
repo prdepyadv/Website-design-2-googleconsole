@@ -215,8 +215,8 @@ fieldset {
 <div class="pp">
 	<a class="top pp"href="https://www.google.com/" title="Home">Home</a>
 	<a class="top pp"href="https://www.google.com/" title="Audio">Audio</a>
-	<a class="top pp" onclick="image_c()" title="Video">Video</a>
-	<a class="top pp"href="www.google.com" title="File">File</a>
+	<a class="top pp" title="Video">Video</a>
+	<a class="top pp" onclick="image_c()" title="File">File</a>
 	<a class="top pp"href="www.google.com" title="Contact Us">Contact Us</a>
 	<a class="top pp" id="wel" style="float:right" href="http://34.69.140.33/Website-design-2/index.php">Sign Out</a>
 	
@@ -267,7 +267,7 @@ Update info (2/2)
 
 <h1 >Welcome,</h1>
 <br>
-<img src="" class="imgg" style="width:40px;height:40px">
+<img src="" alt="?" class="imgg" style="width:40px;height:40px">
 </form>
 </div>
 
