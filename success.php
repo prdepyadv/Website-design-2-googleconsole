@@ -267,7 +267,7 @@ Update info (2/2)
 
 <h1 >Welcome,</h1>
 <br>
-<img src="/var/www/html/Website-design-2/uploads/7147-background-4232859_1280" style="width:40px;height:40px">
+<img src="/var/www/html/Website-design-2/uploads/2205-background-4232859_1280.png" style="width:40px;height:40px">
 </form>
 </div>
 
