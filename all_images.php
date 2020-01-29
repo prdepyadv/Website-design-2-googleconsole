@@ -14,7 +14,8 @@ $conn=new mysqli ($host ,$dbusername,$dbpassword,$dbname);
 		{
 			$sql_e = "SELECT image_path FROM Test";
 			$result_e = mysqli_query($conn,$sql_e);
-			echo mysqli_fetch_all($result_e, MYSQLI_ASSOC);
+			$row = mysqli_fetch_all($result_e, MYSQLI_ASSOC);
+			echo $row[0][3];
 
 		}
 ?>
