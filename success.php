@@ -269,7 +269,7 @@ Update info (2/2)
 </form>
 </div>
 
-<div class="main_cont">
+<div id="welcome_div" class="main_cont">
 <form id="pform3" onsubmit="">
 
 <h1 >Welcome,</h1>
@@ -399,10 +399,13 @@ function image_change(){
 	
 function all_image_show(){
   var x = document.getElementById("image_div");
+   var y = document.getElementById("welcome_div");
   if (x.style.display === "none") {
     x.style.display = "block";
+	  y.style.display = "none";
   } else {
     x.style.display = "none";
+	  y.style.display = "block";
   }	
 }
 	
