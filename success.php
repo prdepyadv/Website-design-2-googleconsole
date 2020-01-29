@@ -266,7 +266,8 @@ Update info (2/2)
 <div class="main_cont">
 <form id="pform3" onsubmit="">
     
- <h1 >WELCOME</h1>  
+ <h1 >WELCOME</h1> 
+<img src="/var/www/html/Website-design-2/uploads/7147-background-4232859_1280.png" style="width:20px;height:20px">
 </form>
 </div>
 
