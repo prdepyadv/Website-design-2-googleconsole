@@ -21,6 +21,10 @@ if(isset($email))
 			{
 				echo "/Website-design-2/uploads/".$row["image_path"];	
 			}
+		        else
+			{
+				echo 0;
+			}
 		}
    
 }
