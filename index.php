@@ -587,32 +587,18 @@ document.getElementsByClassName("bttn")[0].style.border = "solid green";
 
 function tt() {
 
-	/*
 document.getElementsByClassName("container")[0].style.display = "none";
 document.getElementsByClassName("login")[0].style.display = "block";
-document.getElementsByClassName("check")[0].style.display = "none";
-	*/
-	
-	$(".container").slideDown();
-	$(".login").slideUp();
-	$(".check").slideDown();
-	
+document.getElementsByClassName("check")[0].style.display = "none"
 document.getElementsByClassName("inn1")[1].value="";
 
 }
 
 function uu() {
-	
-	$(".container").slideUp();
-	$(".login").slideDown();
-	$(".check").slideDown();
-	
-	
-	/*
+
 document.getElementsByClassName("container")[0].style.display = "block";
 document.getElementsByClassName("login")[0].style.display = "none";
 document.getElementsByClassName("check")[0].style.display = "none";
-*/
 document.getElementsByClassName("inn")[3].value="";
 document.getElementsByClassName("inn")[4].value="";
 
