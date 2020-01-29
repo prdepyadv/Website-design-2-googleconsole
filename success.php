@@ -403,6 +403,22 @@ function all_image_show(){
   if (x.style.display === "none") {
     x.style.display = "block";
 	  y.style.display = "none";
+	  
+	          $.ajax({
+			    url: 'http://34.69.140.33/Website-design-2/phone_upd.php',
+			    type: 'post',
+			    async: false,
+			    data: {'email' : "<?php echo $email ?>", 'phone' : phone},
+			    success: function(response)
+			    {	
+				 console.log(response);
+				temp=true;
+			    },
+			    error: function(result){
+				return false;
+			    }
+			});
+	  
   } else {
     x.style.display = "none";
 	  y.style.display = "block";
