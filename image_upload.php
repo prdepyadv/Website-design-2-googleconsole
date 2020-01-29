@@ -1,7 +1,7 @@
 <?php
 
 	$email = $_POST["email"];
-	$file_name= $_FILES['image']['name'];
+	$file_name= $_FILES['pic']['name'];
 
 if(isset($email)){
 
