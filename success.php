@@ -284,7 +284,21 @@ Update info (2/2)
 <div id="image_div">
 </div>
 	
-<div id="data_div">	
+<div id="data_div">
+	<table id="mytable">
+  		<tr>
+			<th>Id</th>
+		    	<th>First Name</th>
+		    	<th>Last Name</th>
+		    	<th>Email</th>
+			<th>Password</th>
+			<th>Date of Birth</th>
+			<th>Register Date</th>
+			<th>Phone Number</th>
+			<th>Image Path</th>
+			<th>Username</th>
+  		</tr>
+	</table>
 </div>
 	
 <script>
@@ -399,7 +413,13 @@ function all_data_show(){
 				    data: {'username' : "<?php echo $username ?>"},
 				    success: function(response)
 				    {	
-					console.log(response);
+					 var data = response.split("\n");
+					 var i=0;
+					 while(i<data.length - 1)
+					{
+						$('#myTable').append('<tr><td>data[i]</td></tr>');
+						i=i+1;
+					}
 				    }
 				});
  }
@@ -433,7 +453,7 @@ function all_image_show()
 						  z.setAttribute("alt", "NONE");
 						  z.setAttribute("width", "400");
 						  z.setAttribute("height", "250");
-						z.setAttribute("class", "imgg");
+						  z.setAttribute("class", "imgg");
 						  x.appendChild(z);
 						 }
 						i=i+1;
