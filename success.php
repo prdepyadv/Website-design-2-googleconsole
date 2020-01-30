@@ -434,11 +434,6 @@ function all_data_show(){
 	}
 	else{
 		document.getElementById("data_div").style.display = "none";
-		const parent = document.getElementById("data_div");
-			while (parent.firstChild)
-				{
-				parent.firstChild.remove();
-				}
 	}
  }
 			       
