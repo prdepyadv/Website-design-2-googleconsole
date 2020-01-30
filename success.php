@@ -440,7 +440,11 @@ function all_data_show(){
 		document.getElementsByClassName("main_cont")[0].style.display = "block";
 	}
  }
-			       
+
+function deleteRow(r) {
+  var i = r.parentNode.rowIndex;
+  document.getElementById("mytable").deleteRow(i);
+}
 	
 function all_image_show()
 {
