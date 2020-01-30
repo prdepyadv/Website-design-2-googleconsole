@@ -419,7 +419,7 @@ function all_image_show()
 					path = response.split("\n");
 					while(i<path.length)
 					{
-						  var x = document.createElement("im1");
+						  var x = document.createElement("IMG");
 						  x.setAttribute("src", path[i]);
 						  x.setAttribute("width", "304");
 						  x.setAttribute("height", "228");
