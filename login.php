@@ -23,10 +23,10 @@ if(isset($username) and isset($password))
 			$row = mysqli_fetch_assoc($result_e);
 			if(password_verify($password, $row["Phone"]))
 			{
-			echo true;
+			echo '1';
 			}
 			else{
-			echo false;
+			echo '0';
 			}
 		}
 
