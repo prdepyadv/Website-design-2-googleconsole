@@ -22,8 +22,10 @@ if(isset($username))
 					$result_e = mysqli_query($conn,$sql_e);
 					while ($row = mysqli_fetch_assoc($result_e))
 					{
-						if($row["image_path"] == " "){continue;}
-						echo "/Website-design-2/uploads/".$row["image_path"]."\n";
+						if($row["image_path"] != " ")
+						{						
+							echo "/Website-design-2/uploads/".$row["image_path"]."\n";
+						}
 					}
 				}
 	}	
