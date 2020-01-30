@@ -402,6 +402,7 @@ function all_image_show()
 {
   var x = document.getElementById("image_div");
   var y = document.getElementById("welcome_div");
+  var path;
   var temp;	
 
 	  if (x.style.display === "none")
@@ -415,7 +416,8 @@ function all_image_show()
 				    data: {'username' : "<?php echo $username ?>"},
 				    success: function(response)
 				    {	
-					document.getElementsByClassName("im1")[0].src = response;
+					path = response.split(" ");
+					document.getElementsByClassName("im1")[0].src = path[0];
 				    }
 				});
 
