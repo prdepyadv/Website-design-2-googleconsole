@@ -21,7 +21,7 @@ if(isset($username) and isset($password))
 			$sql_e = "SELECT * FROM Test WHERE username = '".$username."'";
 			$result_e = mysqli_query($conn,$sql_e);
 			$row = mysqli_fetch_assoc($result_e);
-			if(password_verify($password, $row["Phone"]))
+			if(password_verify($password, $row["Password"]))
 			{
 			echo '1';
 			}
