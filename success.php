@@ -437,6 +437,11 @@ function all_data_show(){
 	else{
 		document.getElementById("data_div").style.display = "none";
 		document.getElementsByClassName("main_cont")[0].style.display = "block";
+		const pt = document.getElementById("mytable");
+		while (parent.firstChild)
+			{
+    			parent.firstChild.remove();
+			}
 	}
  }
 			       
