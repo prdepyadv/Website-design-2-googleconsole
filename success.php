@@ -396,7 +396,7 @@ function all_data_show(){
 				    data: {'username' : "<?php echo $username ?>"},
 				    success: function(response)
 				    {	
-					console.log(response);
+					console.log(response[0]);
 				    }
 				});
  }
