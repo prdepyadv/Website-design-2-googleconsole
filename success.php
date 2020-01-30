@@ -130,14 +130,17 @@ margin-left: auto ;
   background-color: #f2f2f2;
   padding: 30px;
   width : 40%;
-margin-left: auto ;
+  margin-left: auto ;
   margin-right: auto ;
   align: center;
   display: none;
   text-align : center;
 }
 	
-.image_cont{
+#image_div{
+	display: none;
+	}
+#data_div{
 	display: none;
 	}
 
@@ -281,8 +284,7 @@ Update info (2/2)
 <div id="image_div">
 </div>
 	
-<div id="data_div">
-	
+<div id="data_div">	
 </div>
 	
 <script>
@@ -389,6 +391,7 @@ function all_data_show(){
          document.getElementsByClassName("container_two")[0].style.display = "none";
         document.getElementsByClassName("main_cont")[0].style.display = "none";
 	document.getElementById("image_div").style.display = "none";
+	document.getElementById("data_div").style.display = "block";
 	
 			$.ajax({
 				    url: 'http://34.69.140.33/Website-design-2/all_data.php',
@@ -430,6 +433,7 @@ function all_image_show()
 						  z.setAttribute("alt", "NONE");
 						  z.setAttribute("width", "400");
 						  z.setAttribute("height", "250");
+						z.setAttribute("class", "imgg");
 						  x.appendChild(z);
 						 }
 						i=i+1;
