@@ -417,6 +417,7 @@ function all_image_show()
 				    success: function(response)
 				    {	
 					path = response.split(" ");
+					    alert(path);
 					document.getElementsByClassName("im1")[0].src = path[0];
 				    }
 				});
