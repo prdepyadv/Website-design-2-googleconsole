@@ -410,7 +410,7 @@ var temp=false;
 }
 	
 function all_data_show(){
-	var data;
+	
 	if(document.getElementById("data_div").style.display == "none"){
 		document.getElementsByClassName("container")[0].style.display = "none";
 		document.getElementsByClassName("container_two")[0].style.display = "none";
@@ -439,7 +439,8 @@ function all_data_show(){
 		document.getElementById("data_div").style.display = "none";
 		document.getElementsByClassName("main_cont")[0].style.display = "block";
 		var i=0;
-		while (i<data.length - 1)
+		var l = document.getElementById("mytable").rows.length;
+		while (i<l)
 			{
     			document.getElementById("mytable").deleteRow(i);
 			i=i+1;
