@@ -408,11 +408,11 @@ function all_image_show()
 					path = response.split("\n");
 					while(i<path.length - 1)
 					{
-						  var x = document.createElement("IMG");
+						  var z = document.createElement("IMG");
 						  x.setAttribute("src", path[i]);
 						  x.setAttribute("width", "304");
 						  x.setAttribute("height", "228");
-						  document.body.appendChild(x);
+						  x.appendChild(z);
 						i=i+1;
 					}
 				    }
