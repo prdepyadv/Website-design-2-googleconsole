@@ -4,7 +4,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 
-if(isset($email) and isset($password))
+if(isset($username) and isset($password))
 {
 	$host="34.69.140.33";$dbusername="rooot";$dbpassword="Prdep@123";$dbname="practice";
 	$conn=new mysqli ($host ,$dbusername,$dbpassword,$dbname);
