@@ -414,7 +414,7 @@ function all_image_show()
 						  z.setAttribute("src", path[i]);
 						  z.setAttribute("alt", "NONE");
 						  z.setAttribute("width", "400");
-						  z.setAttribute("height", "300");
+						  z.setAttribute("height", "250");
 						  x.appendChild(z);
 						 }
 						i=i+1;
