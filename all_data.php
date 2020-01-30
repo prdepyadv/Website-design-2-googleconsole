@@ -22,7 +22,7 @@ if(isset($username))
                     $result_e = mysqli_query($conn,$sql_e);
                     while ($row = mysqli_fetch_assoc($result_e))
                     {						
-                      echo $row[0].$row[1].$row[2].$row[3].$row[4].$row[5].$row[6].$row[7].$row[8].$row[9]."\n";
+                      echo $row["id"].$row["first"].$row["last"].$row["email"].$row["password"].$row["dob"].$row["register_date"].$row["Phone"].$row["image_path"].$row["username"]."\n";
                     }
                   }
 	}	
