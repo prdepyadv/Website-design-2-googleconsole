@@ -14,7 +14,7 @@ $conn=new mysqli ($host ,$dbusername,$dbpassword,$dbname);
 		{
 			$sql_e = "SELECT image_path FROM Test";
 			$result_e = mysqli_query($conn,$sql_e);
-		        while ($row = mysqli_fetch_assoc($result_e))
+		        while ($row = mysqli_fetch_assoc($result_e) and $row["image_path"] != none)
 			{
        	 			echo "/Website-design-2/uploads/".$row["image_path"];
 			}
