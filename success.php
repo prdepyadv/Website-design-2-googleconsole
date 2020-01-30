@@ -29,7 +29,7 @@ echo "<script>alert('error')</script>","<script>window.location.replace('http://
 	
 	
 table, th, td {
-  border: .5px solid black;
+  border-radius: .5px solid black;
 	margin-left: auto ;
   margin-right: auto ;
 }
