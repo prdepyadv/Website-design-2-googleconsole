@@ -1,6 +1,6 @@
 <?php
 
-$email = $_POST['email']; 
+$username = $_POST['username']; 
 $password = $_POST['password'];
 
 
@@ -15,7 +15,7 @@ if(isset($email) and isset($password))
 	    }
 	else
 		{
-			$sql_e = "SELECT * FROM Test WHERE email = '".$email."' and password = '".$password."'";
+			$sql_e = "SELECT * FROM Test WHERE username = '".$username."' and password = '".$password."'";
 			$result_e = mysqli_query($conn,$sql_e);
 			echo mysqli_num_rows($result_e);
 		}
