@@ -278,6 +278,9 @@ Update info (2/2)
 </form>
 </div>
 	
+<div id="image_div">
+	</div>
+	
 <script>
 
         $.ajax({
