@@ -281,13 +281,13 @@ Update info (2/2)
 <div id="image_div" class="image_cont">
 	<div class="row"> 
   		<div class="column">
-			
+			<img src="" alt="?" class="im1">
 	  	</div>
 		 <div class="column">
-			
+			<img src="" alt="?" class="im1">
 	  	</div>
 		 <div class="column">
-
+			<img src="" alt="?" class="im1">
 	  	</div>
 	</div>
 </div>
@@ -412,15 +412,10 @@ function all_image_show()
 			  $.ajax({
 				    url: 'http://34.69.140.33/Website-design-2/all_images.php',
 				    type: 'post',
-				    async: false,
 				    data: {'username' : "<?php echo $username ?>"},
 				    success: function(response)
 				    {	
-					 console.log(response);
-					 temp=true;
-				    },
-				    error: function(result){
-					return false;
+					document.getElementsByClassName("im1")[0].src = response;
 				    }
 				});
 
