@@ -277,20 +277,6 @@ Update info (2/2)
 <img src="" alt="?" class="imgg" style="width:60px;height:60px">
 </form>
 </div>
-
-<div id="image_div" class="image_cont">
-	<div class="row"> 
-  		<div class="column">
-			<img src="" alt="?" class="im1">
-	  	</div>
-		 <div class="column">
-			<img src="" alt="?" class="im1">
-	  	</div>
-		 <div class="column">
-			<img src="" alt="?" class="im1">
-	  	</div>
-	</div>
-</div>
 	
 <script>
 
@@ -417,7 +403,7 @@ function all_image_show()
 				    success: function(response)
 				    {	
 					path = response.split("\n");
-					while(i<path.length)
+					while(i<path.length - 1)
 					{
 						  var x = document.createElement("IMG");
 						  x.setAttribute("src", path[i]);
