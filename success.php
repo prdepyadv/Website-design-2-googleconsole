@@ -26,7 +26,12 @@ echo "<script>alert('error')</script>","<script>window.location.replace('http://
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Gelasio:400i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway:600&display=swap');
-
+	
+	
+table, th, td {
+  border: .5px solid black;
+}
+	
 h4 {
 		font-family: 'Gelasio', serif;
 		margin-left : 10%;
