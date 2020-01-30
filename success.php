@@ -440,11 +440,7 @@ function all_data_show(){
 		document.getElementsByClassName("main_cont")[0].style.display = "block";
 		var i=0;
 		var l = document.getElementById("mytable").rows.length;
-		while (i<l)
-			{
-    			document.getElementById("mytable").deleteRow(i);
-			i=i+1;
-			}
+		alert(l);
 	}
  }
 			       
