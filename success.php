@@ -410,7 +410,7 @@ var temp=false;
 }
 	
 function all_data_show(){
-	
+	var data;
 	if(document.getElementById("data_div").style.display == "none"){
 		document.getElementsByClassName("container")[0].style.display = "none";
 		document.getElementsByClassName("container_two")[0].style.display = "none";
@@ -424,7 +424,7 @@ function all_data_show(){
 					    data: {'username' : "<?php echo $username ?>"},
 					    success: function(response)
 					    {	
-						 var data = response.split("\n");
+						 data = response.split("\n");
 						 var i=0;
 						 while(i<data.length - 1)
 						{
