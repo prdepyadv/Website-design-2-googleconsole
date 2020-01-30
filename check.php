@@ -24,6 +24,13 @@ if(isset($email) and isset($password))
 				}
 			else
 				{
+				
+					$ciphering = "AES-128-CTR"; 
+					$iv_length = openssl_cipher_iv_length($ciphering); 
+					$options = 0; 
+					$encryption_iv = '1234567891011121';
+					$encryption_key = "prdepyadv";
+					$password = openssl_encrypt($password, $ciphering, $encryption_key, $options, $encryption_iv); 
 					$sql="INSERT INTO Test(first,last,email,password,dob,username) VALUES ('$first','$last','$email','$password','$dob','$username')";
 						if($conn->query($sql))
 						{
