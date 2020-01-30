@@ -1,4 +1,4 @@
-<?php $email=filter_input(INPUT_POST,'username');
+<?php $username =filter_input(INPUT_POST,'username');
 if(! isset($username)){
 echo "<script>alert('error')</script>","<script>window.location.replace('http://34.69.140.33/Website-design-2/index.php')</script>";
 }
