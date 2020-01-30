@@ -416,7 +416,7 @@ function all_image_show()
 				    data: {'username' : "<?php echo $username ?>"},
 				    success: function(response)
 				    {	
-					path = response.split(" ");
+					path = response.split("\n");
 					    alert(path[0]);
 					document.getElementsByClassName("im1")[0].src = path[0];
 				    }
