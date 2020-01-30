@@ -3,6 +3,9 @@
 $username = $_POST['username']; 
 $password = $_POST['password'];
 
+$username = str_replace("'"," ",$username);
+$password = str_replace("'"," ",$password);
+
 
 if(isset($username) and isset($password))
 {
