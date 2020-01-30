@@ -29,8 +29,9 @@ echo "<script>alert('error')</script>","<script>window.location.replace('http://
 	
 	
 table, th, td {
-  border-radius: .5px solid black;
+  border : .5px solid black;
 	margin-left: auto ;
+	border-radius: 25px;
   margin-right: auto ;
 }
 	
