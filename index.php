@@ -494,12 +494,12 @@ var temp1;
             data: {'username' : user,'password': pas},
             success: function(response)
             {
-                if(response == '0'){
+                if(response != '1'){
                     alert("username not available or incorrect password")
                     document.getElementsByClassName("inn1")[1].value="";
                     temp1=false;
                 }
-                else if(response == '1'){
+                else{
                     temp1=true;
                 }
             },
