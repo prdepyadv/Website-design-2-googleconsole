@@ -25,19 +25,14 @@ if(isset($email) and isset($password))
 			else
 				{
 				
-					$ciphering = "AES-128-CTR"; 
+					$ciphering = "BF-CBC"; 
 					$iv_length = openssl_cipher_iv_length($ciphering); 
 					$options = 0; 
-					$encryption_iv = '1234567891011121';
-					$encryption_key = "prdepyadv";
-					$password = openssl_encrypt($password, $ciphering, $encryption_key, $options, $encryption_iv); 
+					$encryption_iv = random_bytes($iv_length); 
+
+					$encryption_key = openssl_digest(php_uname(), 'MD5', TRUE);
+					$password = openssl_encrypt($password, $ciphering, $encryption_key, $options, $encryption_iv);  
 			
-				/*
-					$decryption_iv = '1234567891011121'; 
-					$decryption_key = "prdepyadv
-					$password = openssl_decrypt ($password, $ciphering, 
-					$decryption_key, $options, $decryption_iv); 	
-				*/
 				
 					$sql="INSERT INTO Test(first,last,email,password,dob,username) VALUES ('$first','$last','$email','$password','$dob','$username')";
 						if($conn->query($sql))
