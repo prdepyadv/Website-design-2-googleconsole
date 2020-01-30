@@ -407,13 +407,16 @@ function all_image_show()
 				    {	
 					path = response.split("\n");
 					while(i<path.length - 1)
-					{
+					{	
+						if(path[i] != "/Website-design-2/uploads/")
+						{
 						  var z = document.createElement("IMG");
 						  z.setAttribute("src", path[i]);
 						  z.setAttribute("alt", "NONE");
 						  z.setAttribute("width", "304");
 						  z.setAttribute("height", "228");
 						  x.appendChild(z);
+						 }
 						i=i+1;
 					}
 				    }
