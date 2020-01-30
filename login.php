@@ -12,6 +12,12 @@ if(isset($username) and isset($password))
 	$host="34.69.140.33";$dbusername="rooot";$dbpassword="Prdep@123";$dbname="practice";
 	$conn=new mysqli ($host ,$dbusername,$dbpassword,$dbname);
 	
+	$ciphering = "AES-128-CTR"; 
+	$decryption_iv = '1234567891011121'; 
+	$decryption_key = "prdepyadv";
+	$options = 0; 
+	$password = openssl_decrypt ($password, $ciphering, $decryption_key, $options, $decryption_iv); 
+	
 	if(mysqli_connect_error())
 	    {
 			die('Connect Error('.mysqli_connect_errno().')'.mysqli_connect_error());
