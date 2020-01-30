@@ -408,28 +408,38 @@ var temp=false;
 	
 function all_data_show(){
 	
-        document.getElementsByClassName("container")[0].style.display = "none";
-         document.getElementsByClassName("container_two")[0].style.display = "none";
-        document.getElementsByClassName("main_cont")[0].style.display = "none";
-	document.getElementById("image_div").style.display = "none";
-	document.getElementById("data_div").style.display = "block";
-	
-			$.ajax({
-				    url: 'http://34.69.140.33/Website-design-2/all_data.php',
-				    type: 'post',
-				    data: {'username' : "<?php echo $username ?>"},
-				    success: function(response)
-				    {	
-					 var data = response.split("\n");
-					 var i=0;
-					 while(i<data.length - 1)
-					{
-						var row = data[i].split(" ");
-						document.getElementById("mytable").insertRow(-1).innerHTML = '<td>'+row[0]+'</td><td>'+row[1]+'</td><td>'+row[2]+'</td><td>'+row[3]+'</td><td>'+row[4]+'</td><td>'+row[5]+'</td><td>'+row[6]+'</td><td>'+row[7]+'</td><td>'+row[8]+'</td><td>'+row[9]+'</td><td>';
-						i=i+1;
-					}
-				    }
-				});
+	if(document.getElementById("data_div").style.display == "none"){
+		document.getElementsByClassName("container")[0].style.display = "none";
+		document.getElementsByClassName("container_two")[0].style.display = "none";
+		document.getElementsByClassName("main_cont")[0].style.display = "none";
+		document.getElementById("image_div").style.display = "none";
+		document.getElementById("data_div").style.display = "block";
+
+				$.ajax({
+					    url: 'http://34.69.140.33/Website-design-2/all_data.php',
+					    type: 'post',
+					    data: {'username' : "<?php echo $username ?>"},
+					    success: function(response)
+					    {	
+						 var data = response.split("\n");
+						 var i=0;
+						 while(i<data.length - 1)
+						{
+							var row = data[i].split(" ");
+							document.getElementById("mytable").insertRow(-1).innerHTML = '<td>'+row[0]+'</td><td>'+row[1]+'</td><td>'+row[2]+'</td><td>'+row[3]+'</td><td>'+row[4]+'</td><td>'+row[5]+'</td><td>'+row[6]+'</td><td>'+row[7]+'</td><td>'+row[8]+'</td><td>'+row[9]+'</td><td>';
+							i=i+1;
+						}
+					    }
+					});
+	}
+	else{
+		document.getElementById("data_div").style.display = "none";
+		const parent = document.getElementById("data_div");
+			while (parent.firstChild)
+				{
+				parent.firstChild.remove();
+				}
+	}
  }
 			       
 	
