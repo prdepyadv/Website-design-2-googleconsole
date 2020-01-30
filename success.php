@@ -422,7 +422,7 @@ function all_data_show(){
 					 var i=0;
 					 while(i<data.length - 1)
 					{
-						$('#myTable').append('<tr><td>data[i]</td></tr>');
+						document.getElementById("mytable").insertRow(-1).innerHTML = '<td>1</td>';
 						i=i+1;
 					}
 				    }
