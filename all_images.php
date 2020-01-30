@@ -1,8 +1,8 @@
 <?php
 
-$email = $_Post["email"];
+$username = $_Post["username"];
 
-if(isset($email)){
+if(isset($username)){
 $host="34.69.140.33";
 $dbusername="rooot";
 $dbpassword="Prdep@123";
