@@ -423,6 +423,11 @@ function all_image_show()
 	{
 	    x.style.display = "none";
 	    y.style.display = "block";
+		const parent = document.getElementById("image_div");
+		while (parent.firstChild)
+			{
+    			parent.firstChild.remove();
+			}
   	}	
 }
 	
