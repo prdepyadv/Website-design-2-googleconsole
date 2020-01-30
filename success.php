@@ -427,12 +427,11 @@ function all_data_show(){
 	else{
 		document.getElementById("data_div").style.display = "none";
 		document.getElementsByClassName("main_cont")[0].style.display = "block";
-		const pp = document.getElementById("mytable");
-		while (parent.firstChild)
-			{
-    			parent.firstChild.remove();
-			}
-		
+		var node = document.getElementById("mytable");
+		while (node.hasChildNodes()) {
+		  node.removeChild(node.lastChild);
+		}
+
 	}
  }
 
