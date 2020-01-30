@@ -402,7 +402,7 @@ function all_image_show()
 {
   var x = document.getElementById("image_div");
   var y = document.getElementById("welcome_div");
-  var path;
+  var path,i=0;
   var temp;	
 
 	  if (x.style.display === "none")
@@ -417,8 +417,11 @@ function all_image_show()
 				    success: function(response)
 				    {	
 					path = response.split("\n");
-					    alert(path[0]);
-					document.getElementsByClassName("im1")[0].src = path[0];
+					while(i<path.length)
+					{
+					document.getElementsByClassName("im1")[i].src = path[i];
+					i=i+1;
+					}
 				    }
 				});
 
