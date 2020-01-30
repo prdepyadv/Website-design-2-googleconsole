@@ -1,5 +1,5 @@
 <?php $email=filter_input(INPUT_POST,'email');
-if(! isset($email)){
+if(! isset($username)){
 echo "<script>alert('error')</script>","<script>window.location.replace('http://34.69.140.33/Website-design-2/index.php')</script>";
 }
 
@@ -298,7 +298,7 @@ Update info (2/2)
             url: 'http://34.69.140.33/Website-design-2/check_phn.php',
             type: 'post',
             async: false,
-            data: {'email' : "<?php echo $email ?>"},
+            data: {'username' : "<?php echo $username ?>"},
             success: function(response)
             {
         	if(response != 0 ){
@@ -333,7 +333,7 @@ var temp;
             url: 'http://34.69.140.33/Website-design-2/phone_upd.php',
             type: 'post',
             async: false,
-            data: {'email' : "<?php echo $email ?>",'phone' : phone},
+            data: {'username' : "<?php echo $username ?>",'phone' : phone},
             success: function(response)
             {
                 temp=true;
@@ -365,7 +365,7 @@ function image_up(){
 
 var form = $('#pform1')[0];
 var data = new FormData(form);
-data.append("email","<?php echo $email ?>");
+data.append("username","<?php echo $username ?>");
 var temp=false;
 
         $.ajax({
@@ -413,7 +413,7 @@ function all_image_show()
 				    url: 'http://34.69.140.33/Website-design-2/all_images.php',
 				    type: 'post',
 				    async: false,
-				    data: {'email' : "<?php echo $email ?>"},
+				    data: {'username' : "<?php echo $username ?>"},
 				    success: function(response)
 				    {	
 					 console.log(response);
