@@ -367,12 +367,14 @@ function hidecont2(){
 	document.getElementsByClassName("container")[0].style.display = "none";
           document.getElementsByClassName("container_two")[0].style.display = "none";
         document.getElementsByClassName("main_cont")[0].style.display = "block";
+		document.getElementById("data_div").style.display = "none";
 	}
 	else{
 	alert("something went wrong");
 	document.getElementsByClassName("container")[0].style.display = "none";
           document.getElementsByClassName("container_two")[0].style.display = "none";
         document.getElementsByClassName("main_cont")[0].style.display = "block";
+		document.getElementById("data_div").style.display = "none";
 	}
 return false;
     
@@ -450,6 +452,7 @@ function all_image_show()
 	  {
 	    x.style.display = "block";
 	    y.style.display = "none";
+		  document.getElementById("data_div").style.display = "none";
 	  
 			  $.ajax({
 				    url: 'http://34.69.140.33/Website-design-2/all_images.php',
@@ -480,6 +483,7 @@ function all_image_show()
 	{
 	    x.style.display = "none";
 	    y.style.display = "block";
+		document.getElementById("data_div").style.display = "none";
 		const parent = document.getElementById("image_div");
 		while (parent.firstChild)
 			{
