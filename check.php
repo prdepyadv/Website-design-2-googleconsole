@@ -25,16 +25,10 @@ if(isset($email) and isset($password))
 			else
 				{
 				
-					$ciphering = "BF-CBC"; 
-					$iv_length = openssl_cipher_iv_length($ciphering); 
-					$options = 0; 
-					$encryption_iv = random_bytes($iv_length); 
-
-					$encryption_key = openssl_digest(php_uname(), 'MD5', TRUE);
-					$password = openssl_encrypt($password, $ciphering, $encryption_key, $options, $encryption_iv);  
+					$hash = password_hash($password, PASSWORD_DEFAULT); 
 			
 				
-					$sql="INSERT INTO Test(first,last,email,password,dob,username) VALUES ('$first','$last','$email','$password','$dob','$username')";
+					$sql="INSERT INTO Test(first,last,email,password,dob,username) VALUES ('$first','$last','$email','$hash','$dob','$username')";
 						if($conn->query($sql))
 						{
 							echo "<script>alert('success')</script>","<script>window.location.replace('http://34.69.140.33/Website-design-2/index.php')</script>";
