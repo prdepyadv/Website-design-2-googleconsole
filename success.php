@@ -410,6 +410,7 @@ function all_image_show()
 					{
 						  var z = document.createElement("IMG");
 						  z.setAttribute("src", path[i]);
+						  z.setAttribute("alt", "NONE");
 						  z.setAttribute("width", "304");
 						  z.setAttribute("height", "228");
 						  x.appendChild(z);
