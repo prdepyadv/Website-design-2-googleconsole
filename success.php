@@ -424,6 +424,7 @@ function all_image_show()
 						  x.setAttribute("width", "304");
 						  x.setAttribute("height", "228");
 						  document.body.appendChild(x);
+						i=i+1;
 					}
 				    }
 				});
