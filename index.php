@@ -251,7 +251,7 @@ fieldset {
 Login</b>
 </legend>
 <br>
-<input class="inn1" name="email" id="username" type="text" data-toggle="popover" data-trigger="hover" data-content="Enter Username" placeholder="Username" required>
+<input class="inn1" name="username" id="username" type="text" data-toggle="popover" data-trigger="hover" data-content="Enter Username" placeholder="Username" required>
 <input class="inn1" id="pass_word" type="password"  data-toggle="popover" data-trigger="hover" data-content="Enter Password" placeholder="Password" required>
 <br><br>
 <button class="bttn1" type="Submit"><b>Submit</b></button>
