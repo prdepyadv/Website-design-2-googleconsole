@@ -491,7 +491,7 @@ var temp1;
             url: 'http://34.69.140.33/Website-design-2/login.php',
             type: 'post',
             async: false,
-            data: {'email' : user,'password': pas},
+            data: {'username' : user,'password': pas},
             success: function(response)
             {
                 if(response == '0'){
