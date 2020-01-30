@@ -1,9 +1,9 @@
 <?php
 
 	$phone = $_POST["phone"];
-	$email = $_POST["email"];
+	$username = $_POST["username"];
 
-if(isset($phone) and isset($email)){
+if(isset($phone) and isset($username)){
 
 $host="34.69.140.33";$dbusername="rooot";$dbpassword="Prdep@123";$dbname="practice";
 
@@ -14,7 +14,7 @@ $host="34.69.140.33";$dbusername="rooot";$dbpassword="Prdep@123";$dbname="practi
 	    }
 	else
 		{
-            $sql="UPDATE Test SET Phone = '".$phone."' WHERE email = '".$email."';";
+            $sql="UPDATE Test SET Phone = '".$phone."' WHERE username = '".$username."';";
 					if($conn->query($sql))
 						{
 							echo true;
