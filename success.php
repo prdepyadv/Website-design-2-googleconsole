@@ -310,6 +310,7 @@ Update info (2/2)
 	
 <script>
 
+	var data;
         $.ajax({
             url: 'http://34.69.140.33/Website-design-2/check_phn.php',
             type: 'post',
@@ -437,10 +438,11 @@ function all_data_show(){
 	else{
 		document.getElementById("data_div").style.display = "none";
 		document.getElementsByClassName("main_cont")[0].style.display = "block";
-		const pt = document.getElementById("mytable");
-		while (parent.firstChild)
+		var i=0;
+		while (i<data.length - 1)
 			{
-    			parent.firstChild.remove();
+    			document.getElementById("mytable").deleteRow(i);
+			i=i+1;
 			}
 	}
  }
@@ -450,7 +452,7 @@ function all_image_show()
 {
   var x = document.getElementById("image_div");
   var y = document.getElementById("welcome_div");
-  var path,i=0;
+  var i=0;
   var temp;	
 
 	  if (x.style.display === "none")
