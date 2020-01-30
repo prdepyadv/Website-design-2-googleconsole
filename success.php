@@ -429,7 +429,7 @@ function all_data_show(){
 						 while(i<data.length - 1)
 						{
 							var row = data[i].split(" ");
-							document.getElementById("mytable").insertRow(-1).innerHTML = '<td>'+row[0]+'</td><td>'+row[1]+'</td><td>'+row[2]+'</td><td>'+row[3]+'</td><td>'+row[4]+'</td><td>'+row[5]+'</td><td>'+row[6]+'</td><td>'+row[7]+'</td><td>'+row[8]+'</td><td>'+row[9]+'</td><td>';
+							document.getElementById("mytable").insertRow(-1).innerHTML = '<td>'+row[0]+'</td><td>'+row[1]+'</td><td>'+row[2]+'</td><td>'+row[3]+'</td><td>'+row[4]+'</td><td>'+row[5]+'</td><td>'+row[6]+'</td><td>'+row[7]+'</td><td>'+row[8]+'</td><td>'+row[9]+'</td><td><input type="button" value="Delete" onclick="deleteRow(this)"></td>';
 							i=i+1;
 						}
 					    }
@@ -438,9 +438,6 @@ function all_data_show(){
 	else{
 		document.getElementById("data_div").style.display = "none";
 		document.getElementsByClassName("main_cont")[0].style.display = "block";
-		var i=0;
-		var l = document.getElementById("mytable").rows.length;
-		alert(l);
 	}
  }
 			       
