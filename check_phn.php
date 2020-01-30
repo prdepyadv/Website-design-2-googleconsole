@@ -1,7 +1,7 @@
 <?php
 
-	$email = $_POST["email"];
-if(isset($email))
+	$username = $_POST["username"];
+if(isset($username))
 {
 	$host="34.69.140.33";
 	$dbusername="rooot";
@@ -14,7 +14,7 @@ if(isset($email))
 	    }
 	else
 		{
-			$sql_e = "SELECT * FROM Test WHERE email = '".$email."'";
+			$sql_e = "SELECT * FROM Test WHERE username = '".$username."'";
 			$result_e = mysqli_query($conn,$sql_e);
 			$row = mysqli_fetch_assoc($result_e);
 			if(! is_null ( $row["Phone"] ))
