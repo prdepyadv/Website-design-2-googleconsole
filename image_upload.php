@@ -1,9 +1,9 @@
 <?php
 
-	$email = $_POST["email"];
+	$username = $_POST["username"];
 	$file_name= $_FILES['pic']['name'];
 
-if(isset($email)){
+if(isset($username)){
 
 	$host="34.69.140.33";$dbusername="rooot";$dbpassword="Prdep@123";$dbname="practice";
 
@@ -21,7 +21,7 @@ if(isset($email)){
 		{echo "Sorry, there was an error uploading your file.";}
 		
 		
-            $sql="UPDATE Test SET image_path = '".$new_file_name."' WHERE email = '".$email."';";
+            $sql="UPDATE Test SET image_path = '".$new_file_name."' WHERE username = '".$username."';";
 		
 					if($conn->query($sql))
 						{
