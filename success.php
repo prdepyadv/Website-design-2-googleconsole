@@ -409,9 +409,9 @@ function all_image_show()
 					while(i<path.length - 1)
 					{
 						  var z = document.createElement("IMG");
-						  x.setAttribute("src", path[i]);
-						  x.setAttribute("width", "304");
-						  x.setAttribute("height", "228");
+						  z.setAttribute("src", path[i]);
+						  z.setAttribute("width", "304");
+						  z.setAttribute("height", "228");
 						  x.appendChild(z);
 						i=i+1;
 					}
