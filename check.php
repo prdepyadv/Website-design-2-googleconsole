@@ -12,7 +12,7 @@ if(isset($email) and isset($password))
 	$dbpassword="Prdep@123";
 	$dbname="practice";
 	
-	$x = split ("@", $email);
+	$x = explode("@", $email);
 	$username = $x[0];
 	 
 	//connection
