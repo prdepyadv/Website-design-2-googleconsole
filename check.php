@@ -11,6 +11,9 @@ if(isset($email) and isset($password))
 	$dbusername="rooot";
 	$dbpassword="Prdep@123";
 	$dbname="practice";
+	
+	$x = split ("@", $email);
+	$username = $x[0];
 	 
 	//connection
 
@@ -21,7 +24,7 @@ if(isset($email) and isset($password))
 				}
 			else
 				{
-					$sql="INSERT INTO Test(first,last,email,password,dob) VALUES ('$first','$last','$email','$password','$dob')";
+					$sql="INSERT INTO Test(first,last,email,password,dob,username) VALUES ('$first','$last','$email','$password','$dob','$username')";
 						if($conn->query($sql))
 						{
 							echo "<script>alert('success')</script>","<script>window.location.replace('http://34.69.140.33/Website-design-2/index.php')</script>";
