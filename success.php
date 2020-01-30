@@ -442,7 +442,7 @@ function all_data_show(){
  }
 
 function deleteRow(r) {
-  var i = r.parentNode.rowIndex;
+  var i = r.parentNode.parentNode.rowIndex;
   document.getElementById("mytable").deleteRow(i);
 }
 	
