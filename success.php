@@ -1,8 +1,8 @@
-<?php $username = $_Post['username'];
-if(empty($username)){
-echo "<script>alert('error success')</script>","<script>window.location.replace('http://34.69.140.33/Website-design-2/index.php')</script>";
+<?php 
+$username = filter_input(INPUT_POST,'username');
+if(! isset($username)){
+	echo "<script>alert('error success')</script>","<script>window.location.replace('http://34.69.140.33/Website-design-2/index.php')</script>";
 }
-
 ?>
 
 <!DOCTYPE html>
