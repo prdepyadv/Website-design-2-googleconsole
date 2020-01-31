@@ -1,5 +1,5 @@
 <?php $username = $_Post['username'];
-if(! isset($username)){
+if(empty($username)){
 echo "<script>alert('error')</script>","<script>window.location.replace('http://34.69.140.33/Website-design-2/index.php')</script>";
 }
 
