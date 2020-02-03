@@ -7,7 +7,7 @@ $dob=filter_input(INPUT_POST,'dob');
 
 if(isset($email) and isset($password))
 {
-	$host="34.69.140.33";
+	$host="35.226.43.57";
 	$dbusername="rooot";
 	$dbpassword="Prdep@123";
 	$dbname="practice";
@@ -31,7 +31,7 @@ if(isset($email) and isset($password))
 					$sql="INSERT INTO Test(first,last,email,password,dob,username) VALUES ('$first','$last','$email','$hash','$dob','$username')";
 						if($conn->query($sql))
 						{
-							echo "<script>alert('success')</script>","<script>window.location.replace('http://34.69.140.33/Website-design-2/index.php')</script>";
+							echo "<script>alert('success')</script>","<script>window.location.replace('http://35.226.43.57/Website-design-2/index.php')</script>";
 						}
 						else
 						{
@@ -42,7 +42,7 @@ if(isset($email) and isset($password))
 }
 else
 {
-echo "<script>alert('error')</script>","<script>window.location.replace('http://34.69.140.33/Website-design-2/index.php')</script>";
+echo "<script>alert('error')</script>","<script>window.location.replace('http://35.226.43.57/Website-design-2/index.php')</script>";
 }
 die();
 ?>
