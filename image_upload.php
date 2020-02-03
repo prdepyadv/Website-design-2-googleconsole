@@ -5,7 +5,7 @@
 
 if(isset($username)){
 
-	$host="34.69.140.33";$dbusername="rooot";$dbpassword="Prdep@123";$dbname="practice";
+	$host="35.226.43.57";$dbusername="rooot";$dbpassword="Prdep@123";$dbname="practice";
 
     $conn=new mysqli ($host ,$dbusername,$dbpassword,$dbname);
 	if(mysqli_connect_error())
@@ -36,7 +36,7 @@ if(isset($username)){
 	 die();
 }
 else{
-echo "<script>alert('error')</script>","<script>window.location.replace('http://34.69.140.33/Website-design-2/index.php')</script>";
+echo "<script>alert('error')</script>","<script>window.location.replace('http://35.226.43.57/Website-design-2/index.php')</script>";
  die();
 }
   
