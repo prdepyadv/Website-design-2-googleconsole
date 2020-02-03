@@ -6,7 +6,7 @@ if(isset($username))
 {
 	if($username == "prdepyadv")
 	{
-		$host="34.69.140.33";
+		$host="35.226.43.57";
 		$dbusername="rooot";
 		$dbpassword="Prdep@123";
 		$dbname="practice";
