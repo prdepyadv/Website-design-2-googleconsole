@@ -2,7 +2,7 @@
 
 	$email = $_POST["email"];
 
-$host="34.69.140.33";$dbusername="rooot";$dbpassword="Prdep@123";$dbname="practice";
+$host="35.226.43.57";$dbusername="rooot";$dbpassword="Prdep@123";$dbname="practice";
     
     $conn=new mysqli ($host ,$dbusername,$dbpassword,$dbname);
 	if(mysqli_connect_error())
