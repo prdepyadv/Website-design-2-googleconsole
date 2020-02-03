@@ -245,7 +245,7 @@ fieldset {
 
 <div class="login">
 <br>
-<form method="post" onsubmit="return gg();" action="http://34.69.140.33/Website-design-2/success.php">
+<form method="post" onsubmit="return gg();" action="http://35.226.43.57/Website-design-2/success.php">
 <fieldset>
 <legend><b>
 Login</b>
@@ -266,7 +266,7 @@ Login</b>
 
 
 <div class="container">
-<form method="post" id="pform" onsubmit="return ff();" action="http://34.69.140.33/Website-design-2/check.php">
+<form method="post" id="pform" onsubmit="return ff();" action="http://35.226.43.57/Website-design-2/check.php">
 <fieldset>
 <legend><b>
 Registration</b>
@@ -410,7 +410,7 @@ var ema = document.getElementsByClassName("inn")[2].value;
 
 var temp;
         $.ajax({
-            url: 'http://34.69.140.33/Website-design-2/email_val.php',
+            url: 'http://35.226.43.57/Website-design-2/email_val.php',
             type: 'post',
             async: false,
             data: {'email' : ema},
@@ -488,7 +488,7 @@ var pas = document.getElementById("pass_word").value;
 var temp1;
 
         $.ajax({
-            url: 'http://34.69.140.33/Website-design-2/login.php',
+            url: 'http://35.226.43.57/Website-design-2/login.php',
             type: 'post',
             async: false,
             data: {'username' : user,'password': pas},
