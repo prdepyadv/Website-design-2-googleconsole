@@ -1,7 +1,7 @@
 <?php 
 $username = filter_input(INPUT_POST,'username');
 if(! isset($username)){
-	echo "<script>alert('error success')</script>","<script>window.location.replace('http://34.69.140.33/Website-design-2/index.php')</script>";
+	echo "<script>alert('error success')</script>","<script>window.location.replace('http://35.226.43.57/Website-design-2/index.php')</script>";
 }
 ?>
 
@@ -233,7 +233,7 @@ fieldset {
 	<a class="top pp"href="https://www.google.com/" title="Home">Home</a>
 	<a class="top pp" onclick='all_image_show()' title="Store">Pic Store</a>
 	<a class="top pp" onclick="all_data_show()" title="Data">Data</a>
-	<a class="top pp" id="wel" style="float:right" href="http://34.69.140.33/Website-design-2/index.php">Sign Out</a>
+	<a class="top pp" id="wel" style="float:right" href="http://35.226.43.57/Website-design-2/index.php">Sign Out</a>
 	
 
 </div>
@@ -298,7 +298,7 @@ Update info (2/2)
 
 	var data;
         $.ajax({
-            url: 'http://34.69.140.33/Website-design-2/check_phn.php',
+            url: 'http://35.226.43.57/Website-design-2/check_phn.php',
             type: 'post',
             async: false,
             data: {'username' : "<?php echo $username ?>"},
@@ -333,7 +333,7 @@ var phone = document.getElementsByClassName("inn")[0].value;
 var temp;
 
         $.ajax({
-            url: 'http://34.69.140.33/Website-design-2/phone_upd.php',
+            url: 'http://35.226.43.57/Website-design-2/phone_upd.php',
             type: 'post',
             async: false,
             data: {'username' : "<?php echo $username ?>",'phone' : phone},
@@ -374,7 +374,7 @@ data.append("username","<?php echo $username ?>");
 var temp=false;
 
         $.ajax({
-            url: 'http://34.69.140.33/Website-design-2/image_upload.php',
+            url: 'http://35.226.43.57/Website-design-2/image_upload.php',
             type: 'post',
 	    enctype : 'multipart/form-data',
             async: false,
@@ -406,7 +406,7 @@ function all_data_show(){
 		document.getElementById("data_div").style.display = "block";
 
 				$.ajax({
-					    url: 'http://34.69.140.33/Website-design-2/all_data.php',
+					    url: 'http://35.226.43.57/Website-design-2/all_data.php',
 					    type: 'post',
 					    data: {'username' : "<?php echo $username ?>"},
 					    success: function(response)
@@ -461,7 +461,7 @@ function all_image_show()
 		  document.getElementById("data_div").style.display = "none";
 	  
 			  $.ajax({
-				    url: 'http://34.69.140.33/Website-design-2/all_images.php',
+				    url: 'http://35.226.43.57/Website-design-2/all_images.php',
 				    type: 'post',
 				    data: {'username' : "<?php echo $username ?>"},
 				    success: function(response)
