@@ -385,6 +385,7 @@ var temp=false;
             success: function(response)
             {
                 temp=true;
+		console.log(response);
 	    },
             error: function(result){
 		console.log(result);
