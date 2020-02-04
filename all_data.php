@@ -34,7 +34,7 @@ if(isset($username))
 			    $upload->Phone = $row["Phone"];
 			    $upload->image_path = $row["image_path"];
 			    $upload->username = $row["username"];
-			    $myjson->id=$i;
+			    $myjson->index=$i;
 			    $i = $i+1;
 			    $myjson->data = $upload;
 			    echo json_encode($myjson);
