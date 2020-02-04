@@ -22,8 +22,7 @@ if(isset($username))
 		    $upload = array();
                     $result_e = mysqli_query($conn,$sql_e);
                     while ($row = mysqli_fetch_assoc($result_e))
-                    {	
-			    
+                    {	 
 			    $upload + = array("id" => $row["id"],"first" => $row["first"],"last" => $row["last"],"email" => $row["email"],"password" => $row["password"],"dob" => $row["dob"],"register_date" => $row["register_date"],"Phone" => $row["Phone"], "image_path" => $row["image_path"], "username" => $row["username"]);
                     }
 			echo json_encode($upload);
