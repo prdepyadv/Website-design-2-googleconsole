@@ -425,7 +425,11 @@ function all_data_show(){
 								i=i+1;
 							}
 						 }
-					    }
+					    },
+					    error: function(result)
+					    {
+						console.log(result);
+              			            }	
 					});
 	}
 	else{
