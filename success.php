@@ -412,15 +412,13 @@ function all_data_show(){
 					    success: function(response)
 					    {	
 						    var result = JSON.parse(response);
-						    console.log(result.length);
-						 if(response)
+						 if(result)
 						 {
 							 document.getElementById("mytable").insertRow(0).innerHTML = '<tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th><th>Date of Birth</th><th>Register Date</th><th>Phone Number</th><th>Image Path</th><th>Username</th></tr>';
-							 console.log(response.length);
 							 var i=0;
-							 while(i<data.length - 1)
+							 console.log(result[2]["username"]);
+							 while(i<result.length - 1)
 							{
-								var row = data[i].split("*");
 								document.getElementById("mytable").insertRow(-1).innerHTML = '<td>'+row[0]+'</td><td>'+row[1]+'</td><td>'+row[2]+'</td><td>'+row[3]+'</td><td>'+row[4]+'</td><td>'+row[5]+'</td><td>'+row[6]+'</td><td>'+row[7]+'</td><td>'+row[8]+'</td><td>'+row[9]+'</td><td><input type="button" value="Edit" onclick="editRow(this)">/<input type="button" value="Delete" onclick="deleteRow(this)"></td>';
 								i=i+1;
 							}
