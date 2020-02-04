@@ -19,10 +19,11 @@ if(isset($username))
                 else
                   {
                     $sql_e = "SELECT * FROM Test";
-		
+		    $i = 0;
                     $result_e = mysqli_query($conn,$sql_e);
                     while ($row = mysqli_fetch_assoc($result_e))
                     {	
+			    
 			    $upload->id = $row["id"];
 			    $upload->first = $row["first"];
 			    $upload->last = $row["last"];
@@ -33,7 +34,10 @@ if(isset($username))
 			    $upload->Phone = $row["Phone"];
 			    $upload->image_path = $row["image_path"];
 			    $upload->username = $row["username"];
-			    echo json_encode($upload);
+			    $myjson->id=$i;
+			    $i = $i+1;
+			    $myjson->data = json_encode($upload);
+			    echo json_encode($myjson);
                     }
                   }
 	}	
