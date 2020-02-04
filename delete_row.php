@@ -17,7 +17,7 @@ $host="35.226.43.57";$dbusername="rooot";$dbpassword="Prdep@123";$dbname="practi
 		{
 			$sql_e = "DELETE FROM Test WHERE id = '".$id."'";
 			$result_e = mysqli_query($conn,$sql_e);
-			echo mysqli_num_rows($result_e);
+			mysqli_num_rows($result_e);
 		}}
    
     die();	
