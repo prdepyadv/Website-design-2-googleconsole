@@ -21,6 +21,7 @@ if(isset($username))
                     $sql_e = "SELECT * FROM Test";
 		    $i = 0;
                     $result_e = mysqli_query($conn,$sql_e);
+			$upload = array();
                     while ($row = mysqli_fetch_assoc($result_e))
                     {	
 			    
