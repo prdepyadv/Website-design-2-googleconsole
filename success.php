@@ -416,7 +416,7 @@ function all_data_show(){
 						 {
 							 document.getElementById("mytable").insertRow(0).innerHTML = '<tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th><th>Date of Birth</th><th>Register Date</th><th>Phone Number</th><th>Image Path</th><th>Username</th></tr>';
 							 var i=0;
-							 while(i<result.length - 1)
+							 while(i<result.length)
 							{
 								document.getElementById("mytable").insertRow(-1).innerHTML = '<td>'+result[i]["id"]+'</td><td>'+result[i]["first"]+'</td><td>'+result[i]["last"]+'</td><td>'+result[i]["email"]+'</td><td>'+result[i]["password"]+'</td><td>'+result[i]["dob"]+'</td><td>'+result[i]["register_date"]+'</td><td>'+result[i]["Phone"]+'</td><td>'+result[i]["image_path"]+'</td><td>'+result[i]["username"]+'</td><td><input type="button" value="Edit" onclick="editRow(this)">/<input type="button" value="Delete" onclick="deleteRow(this)"></td>';
 								i=i+1;
@@ -444,7 +444,11 @@ function deleteRow(r) {
   var i = r.parentNode.parentNode.rowIndex;
   var x = document.getElementById("mytable").rows[i].cells;
  var id = x[0].innerText;
-	alert(id);
+	$.ajax({
+					    url: 'http://35.226.43.57/Website-design-2/delete_row.php',
+					    type: 'post',
+					    data: {'username' : "<?php echo $username ?>",'id': id}
+				});
   document.getElementById("mytable").deleteRow(i);
 }
 	
