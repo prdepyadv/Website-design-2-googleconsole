@@ -42,7 +42,6 @@ if(isset($username))
 			    }
 				echo json_encode($upload);
 			}
-			}
                   }	
 }
 ?>
