@@ -36,7 +36,7 @@ if(isset($username))
 			    $upload->username = $row["username"];
 			    $myjson->id=$i;
 			    $i = $i+1;
-			    $myjson->data = json_encode($upload);
+			    $myjson->data = $upload;
 			    echo json_encode($myjson);
                     }
                   }
