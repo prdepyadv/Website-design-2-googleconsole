@@ -19,10 +19,21 @@ if(isset($username))
                 else
                   {
                     $sql_e = "SELECT * FROM Test";
+		
                     $result_e = mysqli_query($conn,$sql_e);
                     while ($row = mysqli_fetch_assoc($result_e))
-                    {						
-                      echo $row["id"]."*".$row["first"]."*".$row["last"]."*".$row["email"]."*".$row["password"]."*".$row["dob"]."*".$row["register_date"]."*".$row["Phone"]."*".$row["image_path"]."*".$row["username"]."\n";
+                    {	
+			    $upload->id = $row["id"];
+			    $upload->first = $row["first"];
+			    $upload->last = $row["last"];
+			    $upload->email = $row["email"];
+			    $upload->password = $row["password"];
+			    $upload-> = $row["dob"];
+			    $upload->register_date =$row["register_date"];
+			    $upload->Phone = $row["Phone"];
+			    $upload->image_path = $row["image_path"];
+			    $upload->username = $row["username"];
+			    echo json_encode($upload);
                     }
                   }
 	}	
