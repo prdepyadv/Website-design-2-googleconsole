@@ -469,7 +469,7 @@ function editRow(r) {
 		var x = document.getElementById("mytable").rows[i].cells
 		var j=1;
 		while(j<x.length){x[j].contentEditable = "false"; j=j+1;}
-		alert(document.getElementById("myTable").rows.item(i).innerText);
+		alert(document.getElementById("mytable").rows.item(i).innerText);
 	}
 	
 }
