@@ -454,7 +454,10 @@ function deleteRow(r) {
 	
 function editRow(r) {
   var i = r.parentNode.parentNode.rowIndex;
-  $("#mytable:nth-child("+r+")").prop('contenteditable', true);
+	var x = document.getElementById("mytable").rows[i].cells;
+	x.prop('contenteditable', true);
+  //$("#mytable:nth-child("+i+")").prop('contenteditable', true);
+	
 }
 	
 function all_image_show()
