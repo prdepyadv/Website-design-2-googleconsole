@@ -455,7 +455,7 @@ function deleteRow(r) {
 function editRow(r) {
 	var y = $(r).val();
 if(y == "Edit"){
-	$(r).val() = "Save";
+	$(r).val("Save");
   var i = r.parentNode.parentNode.rowIndex;
 var x = document.getElementById("mytable").rows[i].cells
 var j=1;
