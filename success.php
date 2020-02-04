@@ -442,6 +442,9 @@ function all_data_show(){
 
 function deleteRow(r) {
   var i = r.parentNode.parentNode.rowIndex;
+  var x = document.getElementById("mytable").rows[i].cells;
+ var id = x[0].innerText;
+	alert(id);
   document.getElementById("mytable").deleteRow(i);
 }
 	
