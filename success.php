@@ -464,12 +464,36 @@ function editRow(r) {
 	}
 	else if(y == "Save")
 	{
-		$(r).val("Edit");
 		var i = r.parentNode.parentNode.rowIndex;
 		var x = document.getElementById("mytable").rows[i].cells
-		var j=1;
-		while(j<x.length){x[j].contentEditable = "false"; j=j+1;}
-		console.log(typeof document.getElementById("mytable").rows.item(i).innerText);
+		var data = new FormData();
+		data.append("id",x[0].innerText);
+		data.append("first",x[1].innerText);
+		data.append("last",x[2].innerText);
+		data.append("email",x[3].innerText);
+		data.append("dob",x[5].innerText);
+		data.append("Phone",x[7].innerText);
+		data.append("username",x[9].innerText);
+		$.ajax({
+			    url: 'http://35.226.43.57/Website-design-2/update_profile.php',
+			    type: 'post',
+			    enctype : 'multipart/form-data',
+			    async: false,
+			    data: data,
+			    processData: false,
+			    contentType: false,
+			    cache: false,
+			    success: function(response)
+			    {
+						var j=1;
+						while(j<x.length){x[j].contentEditable = "false"; j=j+1;}
+				    		$(r).val("Edit");
+			    },
+			    error: function(result){
+				console.log(result);
+				return false;
+			    }
+		});
 	}
 	
 }
