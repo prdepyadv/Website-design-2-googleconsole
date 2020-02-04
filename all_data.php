@@ -24,21 +24,19 @@ if(isset($username))
                     while ($row = mysqli_fetch_assoc($result_e))
                     {	
 			    
-			    $upload->id = $row["id"];
-			    $upload->first = $row["first"];
-			    $upload->last = $row["last"];
-			    $upload->email = $row["email"];
-			    $upload->password = $row["password"];
-			    $upload->dob = $row["dob"];
-			    $upload->register_date =$row["register_date"];
-			    $upload->Phone = $row["Phone"];
-			    $upload->image_path = $row["image_path"];
-			    $upload->username = $row["username"];
-			    $myjson->index=$i;
-			    $i = $i+1;
-			    $myjson->data = $upload;
-			    echo json_encode($myjson);
+			    $upload + = array["id" => $row["id"],
+			    "first" => $row["first"],
+			    "last" => $row["last"],
+			    "email" => $row["email"],
+			    "password" => $row["password"],
+			    "dob" => $row["dob"],
+			    "register_date" => $row["register_date"],
+			    "Phone" => $row["Phone"],
+			    "image_path" => $row["image_path"],
+			    "username" => $row["username"]];
+
                     }
+			echo json_encode($upload);
                   }
 	}	
 }
