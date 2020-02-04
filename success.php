@@ -454,7 +454,7 @@ function deleteRow(r) {
 	
 function editRow(r) {
   var i = r.parentNode.parentNode.rowIndex;
-  $("#mytable:nth-child(1)").prop('contenteditable', true);
+  $("#mytable:nth-child(i)").prop('contenteditable', true);
 }
 	
 function all_image_show()
