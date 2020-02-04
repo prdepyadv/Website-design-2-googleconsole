@@ -411,10 +411,11 @@ function all_data_show(){
 					    data: {'username' : "<?php echo $username ?>"},
 					    success: function(response)
 					    {	
+						    response = JSON.parse(response);
 						 if(response)
 						 {
 							 document.getElementById("mytable").insertRow(0).innerHTML = '<tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th><th>Date of Birth</th><th>Register Date</th><th>Phone Number</th><th>Image Path</th><th>Username</th></tr>';
-							 data = response.split("\n");
+							 console.log(response.length);
 							 var i=0;
 							 while(i<data.length - 1)
 							{
