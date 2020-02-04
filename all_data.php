@@ -28,6 +28,7 @@ if(isset($username))
 					$i = $i+1;
 			    }
 				echo json_encode($upload);
+				echo json_encode(mysqli_fetch_assoc($result_e);
 			}
 			else
 			{
