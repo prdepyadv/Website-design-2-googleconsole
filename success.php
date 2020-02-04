@@ -454,8 +454,8 @@ function deleteRow(r) {
 	
 function editRow(r) {
   var i = r.parentNode.parentNode.rowIndex;
-	var x = document.getElementById("mytable").rows[i].cells;
-	x.prop('contenteditable', true);
+document.getElementById("mytable").rows[i].cells.contentEditable = "true";
+	//x.prop('contenteditable', true);
   //$("#mytable:nth-child("+i+")").prop('contenteditable', true);
 	
 }
