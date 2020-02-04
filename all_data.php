@@ -28,7 +28,7 @@ if(isset($username))
 			    $upload->last = $row["last"];
 			    $upload->email = $row["email"];
 			    $upload->password = $row["password"];
-			    $upload-> = $row["dob"];
+			    $upload->dob = $row["dob"];
 			    $upload->register_date =$row["register_date"];
 			    $upload->Phone = $row["Phone"];
 			    $upload->image_path = $row["image_path"];
