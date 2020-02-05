@@ -20,7 +20,7 @@ if(isset($username)){
 	    }
 	else
 		{
-            $sql="UPDATE Test SET first = '".$first."', last= '".$last."', email= '".$email."', dob = '".$dob."', Phone = '".$phone."' WHERE id = '".$id."'";
+            $sql="UPDATE Test SET first = '".$first."', last= '".$last."', email= '".$email."', dob = '".$dob."', Phone = '".$Phone."' WHERE id = '".$id."'";
 		
 					if($conn->query($sql))
 						{
