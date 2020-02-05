@@ -32,9 +32,13 @@ table, th, td {
 	border : .5px solid black;
   margin-left: auto ;
   margin-right: auto ;
-	padding: 1px;
+	padding: 3px;
 	text-align: center;
 }
+#mytable tr:nth-child(even){background-color: #f2f2f2;}
+
+#mytable tr:hover {background-color: #ddd;}
+	
 th {
 	text-align: center;
 	background-color: black;
