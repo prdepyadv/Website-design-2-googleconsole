@@ -328,7 +328,7 @@ Update info (2/2)
 
 function sign_out(){
 <?php session_destroy(); ?>
-window.location.replace('http://35.226.43.57/Website-design-2/index.php')
+window.location.replace('http://35.226.43.57/Website-design-2/index.php');
 }
         
 	
