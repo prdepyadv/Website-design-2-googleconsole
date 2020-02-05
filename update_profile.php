@@ -9,6 +9,7 @@ $Phone = $_POST["Phone"];
 $username = $_POST["username"];
 
 include email_val.php;
+echo mysqli_num_rows($result_e);
 
 if(isset($username)){
 
