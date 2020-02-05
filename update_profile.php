@@ -5,7 +5,7 @@ $id = $_POST["id"];
 $last = $_POST["last"];
 $email = $_POST["email"];
 $dob = $_POST["dob"];
-$phone = $_POST["phone"];
+$phone = $_POST["Phone"];
 $username = $_POST["username"];
 
 if(isset($username)){
