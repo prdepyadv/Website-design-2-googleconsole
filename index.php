@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script type = "text/javascript" >
    function preventBack(){window.history.forward();}
     setTimeout("preventBack()", 0);
@@ -259,7 +259,11 @@ Login</b>
 <input class="inn1" id="pass_word" type="password"  data-toggle="popover" data-trigger="hover" data-content="Enter Password" placeholder="Password" required>
 <br><br>
 <button class="bttn1" type="Submit"><b>Submit</b></button>
-<div class="loader"><div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div></div>
+<div class="loader">
+	<div class="spinner-border" role="status">
+		<span class="sr-only">Loading...</span>
+	</div>
+</div>
 <br>
 <br>
 <h4>Not registered yet? <a onclick="uu();">Sign up now!</a></h4>
