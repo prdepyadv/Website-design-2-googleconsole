@@ -20,10 +20,11 @@ if(isset($username)){
 	else
 	{
             	
-		$sql_e = "SELECT * FROM Test WHERE email = '".$email."'";
+		$sql_e = "SELECT id FROM Test WHERE email = '".$email."'";
 		$result_e = mysqli_query($conn,$sql_e);
 		$i = mysqli_num_rows($result_e);
-		if($i == 0)
+		$row = mysqli_fetch_assoc($result_e)
+		if($i == 0 and ($row["id"] == $id or empty($row["id"])))
 		{
 			$sql="UPDATE Test SET first = '".$first."', last= '".$last."', email= '".$email."', dob = '".$dob."', Phone = '".$phone."' WHERE id = '".$id."'";
 
