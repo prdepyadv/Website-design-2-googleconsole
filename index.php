@@ -137,7 +137,14 @@ input[type=text],input[type=email] ,input[type=password] ,input[type=date]  {
   font-family: 'Raleway', sans-serif;
 
 }
+
+.loader{
+
+	text-align: center;
 	
+	
+}
+
 .loading {
   height: 0;
   width: 0;
@@ -277,7 +284,9 @@ Login</b>
 <input class="inn1" id="pass_word" type="password"  data-toggle="popover" data-trigger="hover" data-content="Enter Password" placeholder="Password" required>
 <br><br>
 <button class="bttn1" type="Submit"><b>Submit</b></button>
-<div class="loading">
+<div class="loader">
+	<div class="loading">
+	</div>
 </div>
 <br>
 <br>
@@ -474,7 +483,7 @@ return false
 }
 else {
     
-document.getElementsByClassName("loading")[0].style.display = "block";
+document.getElementsByClassName("loader")[0].style.display = "block";
 document.getElementsByClassName("bttn1")[0].style.display = "none";
 setTimeout(function(){null},7000);
 	
