@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-echo "<script>console.log(".$_SESSION["username"].")</script>";
+echo "<script>console.log('".$_SESSION["username"]."')</script>";
 
 if(empty($_SESSION["username"])){
 	echo "<script>alert('error success')</script>","<script>window.location.replace('http://35.226.43.57/Website-design-2/index.php')</script>";
