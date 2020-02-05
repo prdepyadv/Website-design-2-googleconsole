@@ -477,7 +477,7 @@ else {
     
 document.getElementsByClassName("loader")[0].style.display = "block";
 document.getElementsByClassName("bttn1")[0].style.display = "none";
-setTimeout(none,10000);
+setTimeout(function(){null},5000);
 return login_validate();
 
 /*
