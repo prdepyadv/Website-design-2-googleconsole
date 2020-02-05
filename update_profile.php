@@ -24,8 +24,7 @@ if(isset($username)){
 		$result_e = mysqli_query($conn,$sql_e);
 		$i = mysqli_num_rows($result_e);
 		$row = mysqli_fetch_assoc($result_e);
-			echo $row["id"];
-		if($i == 0 and ($row["id"] == $id or isset($row["id"])))
+		if($i == 0 and ($row["id"] == $id or empty($row["id"])))
 		{
 			$sql="UPDATE Test SET first = '".$first."', last= '".$last."', email= '".$email."', dob = '".$dob."', Phone = '".$phone."' WHERE id = '".$id."'";
 
