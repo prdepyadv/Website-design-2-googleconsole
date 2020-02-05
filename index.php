@@ -137,36 +137,6 @@ input[type=text],input[type=email] ,input[type=password] ,input[type=date]  {
   font-family: 'Raleway', sans-serif;
 
 }
-
-.loader{
-		margin-left: 20%;
-	text-align: center;
-	
-	
-}
-
-.loading {
-  height: 0;
-  width: 0;
-  padding: 15px;
-  border: 6px solid #ccc;
-  border-right-color: #888;
-  border-radius: 22px;
-  -webkit-animation: rotate 1s infinite linear;
-  /* left, top and position just for the demo! */
-  position: absolute;
-  left: 50%;
-  top: 50%;
-}
-
-@-webkit-keyframes rotate {
-  /* 100% keyframe for  clockwise. 
-     use 0% instead for anticlockwise */
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
 .login {
   border-radius: 50px;
   background-color: #f2f2f2;
@@ -284,10 +254,6 @@ Login</b>
 <input class="inn1" id="pass_word" type="password"  data-toggle="popover" data-trigger="hover" data-content="Enter Password" placeholder="Password" required>
 <br><br>
 <button class="bttn1" type="Submit"><b>Submit</b></button>
-<div class="loader">
-	<div class="loading">
-	</div>
-</div>
 <br>
 <br>
 <h4>Not registered yet? <a onclick="uu();">Sign up now!</a></h4>
@@ -482,10 +448,7 @@ document.getElementsByClassName("inn")[0].focus();
 return false
 }
 else {
-    
-document.getElementsByClassName("loader")[0].style.display = "block";
-document.getElementsByClassName("bttn1")[0].style.display = "none";
-setTimeout(function(){null},7000);
+   
 	
 return login_validate();
 
