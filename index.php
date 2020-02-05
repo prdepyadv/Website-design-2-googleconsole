@@ -369,10 +369,8 @@ alert("Enter Valid DOB");
 return false
 }
 else {
-document.getElementsByClassName("spinner-border")[0].style.display = "block";
-document.getElementsByClassName("bttn")[0].style.display = "none";	
 
-return email_validate();
+	return email_validate();
 
 
 /*
@@ -457,6 +455,8 @@ return false
 }
 else {
     
+document.getElementsByClassName("spinner-border")[0].style.display = "block";
+document.getElementsByClassName("bttn")[0].style.display = "none";	
 return login_validate();
 
 /*
