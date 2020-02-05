@@ -142,7 +142,6 @@ input[type=text],input[type=email] ,input[type=password] ,input[type=date]  {
 	  display: none;
 	  height: 0;
 	  width: 0;
-	  padding: 15px;
 	  border: 6px solid #ccc;
 	  border-right-color: #888;
 	  border-radius: 22px;
@@ -477,7 +476,7 @@ else {
     
 document.getElementsByClassName("loader")[0].style.display = "block";
 document.getElementsByClassName("bttn1")[0].style.display = "none";
-setTimeout(function(){null},5000);
+setTimeout(function(){null},7000);
 return login_validate();
 
 /*
