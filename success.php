@@ -29,9 +29,10 @@ if(! isset($username)){
 	
 	
 table, th, td {
+	border : .5px solid black;
   margin-left: auto ;
   margin-right: auto ;
-	padding: 3px;
+	padding: 1px;
 	text-align: center;
 }
 th {
