@@ -1,5 +1,7 @@
 <?php
 
+include email_val.php;
+
 $id = $_POST["id"];
  $first = $_POST["first"];
 $last = $_POST["last"];
