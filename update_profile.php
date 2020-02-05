@@ -1,7 +1,5 @@
 <?php
 
-include email_val.php;
-
 $id = $_POST["id"];
  $first = $_POST["first"];
 $last = $_POST["last"];
@@ -9,7 +7,8 @@ $email = $_POST["email"];
 $dob = $_POST["dob"];
 $Phone = $_POST["Phone"];
 $username = $_POST["username"];
-	
+
+include email_val.php;
 
 if(isset($username)){
 
