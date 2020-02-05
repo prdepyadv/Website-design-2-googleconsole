@@ -138,18 +138,18 @@ input[type=text],input[type=email] ,input[type=password] ,input[type=date]  {
 
 }
 	
-.loader{
-	  display: none;
-	  height: 0;
-	  width: 0;
-	  border: 6px solid #ccc;
-	  border-right-color: #888;
-	  border-radius: 22px;
-	  -webkit-animation: rotate 1s infinite linear;
-	  /* left, top and position just for the demo! */
-	  position: absolute;
-	  left: 50%;
-	  top: 50%;
+.loading {
+  height: 0;
+  width: 0;
+  padding: 15px;
+  border: 6px solid #ccc;
+  border-right-color: #888;
+  border-radius: 22px;
+  -webkit-animation: rotate 1s infinite linear;
+  /* left, top and position just for the demo! */
+  position: absolute;
+  left: 50%;
+  top: 50%;
 }
 
 @-webkit-keyframes rotate {
@@ -277,7 +277,7 @@ Login</b>
 <input class="inn1" id="pass_word" type="password"  data-toggle="popover" data-trigger="hover" data-content="Enter Password" placeholder="Password" required>
 <br><br>
 <button class="bttn1" type="Submit"><b>Submit</b></button>
-<div class="loader">
+<div class="loading">
 </div>
 <br>
 <br>
@@ -474,9 +474,10 @@ return false
 }
 else {
     
-document.getElementsByClassName("loader")[0].style.display = "block";
+document.getElementsByClassName("loading")[0].style.display = "block";
 document.getElementsByClassName("bttn1")[0].style.display = "none";
 setTimeout(function(){null},7000);
+	
 return login_validate();
 
 /*
