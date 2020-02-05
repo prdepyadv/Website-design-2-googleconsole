@@ -327,8 +327,9 @@ Update info (2/2)
         });
         
 function sign_out(){
-<?php session_start(); session_destroy(); ?>
-	window.location.replace('http://35.226.43.57/Website-design-2/index.php');
+	
+//<?php session_start(); session_destroy(); ?>
+window.location.replace('http://35.226.43.57/Website-design-2/index.php');
 }
 	
 function hidecont1(){
