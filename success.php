@@ -34,9 +34,10 @@ table, th, td {
   margin-right: auto ;
 	padding: 3px;
 }
-table, th {
-	align : center;
-	background-color: white;
+th {
+	text-align: center;
+	background-color: black;
+	color: white;
 	}
 	
 h4 {
