@@ -22,7 +22,8 @@ if(isset($username) and isset($password))
 			$result_e = mysqli_query($conn,$sql_e);
 			$row = mysqli_fetch_assoc($result_e);
 			$check = password_verify($password,$row["password"];
-			if($check == true){
+			if($check == true)
+			{
 			echo $check;
 			session_start();
 			$_SESSION["username"] = $username;
