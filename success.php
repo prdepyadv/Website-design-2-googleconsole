@@ -485,9 +485,16 @@ function editRow(r) {
 			    cache: false,
 			    success: function(response)
 			    {
+				    if(response == '1')
+				    {
 						var j=1;
 						while(j<x.length){x[j].contentEditable = "false"; j=j+1;}
 				    		$(r).val("Edit");
+				    }
+				    else
+				    {
+				    		alert("Email Exist");
+				    }
 			    },
 			    error: function(result){
 				console.log(result);
