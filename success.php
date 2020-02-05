@@ -36,7 +36,7 @@ table, th, td {
 }
 table, th {
 	align : center;
-	background-color: solid white;
+	background-color: white;
 	}
 	
 h4 {
