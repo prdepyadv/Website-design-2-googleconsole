@@ -426,7 +426,7 @@ function all_data_show(){
 						    var result = JSON.parse(response);
 						 if(result)
 						 {
-							 document.getElementById("mytable").insertRow(0).innerHTML = '<tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th><th>Date of Birth</th><th>Register Date</th><th>Phone Number</th><th>Image Path</th><th>Username</th></tr>';
+							 document.getElementById("mytable").insertRow(0).innerHTML = '<tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th><th>Date of Birth</th><th>Register Date</th><th>Phone Number</th><th>Image Path</th><th>Username</th><th></th></tr>';
 							 var i=0;
 							 while(i<result.length)
 							{
