@@ -33,6 +33,7 @@ table, th, td {
   margin-left: auto ;
   margin-right: auto ;
 	padding: 3px;
+	text-align: center;
 }
 th {
 	text-align: center;
