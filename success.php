@@ -34,9 +34,9 @@ table, th, td {
   margin-right: auto ;
 	padding: 3px;
 	text-align: center;
-	background-color: #ddd;
 }
 #mytable tr:nth-child(even){background-color: #f2f2f2;}
+#mytable tr:nth-child(odd){background-color: #ddd;}
 
 #mytable tr:hover {background-color: #ddd;}
 	
