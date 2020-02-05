@@ -1,6 +1,8 @@
 <?php 
+session_start();
 $username = filter_input(INPUT_POST,'username');
-if(! isset($username)){
+$_SESSION["username"] = $username;
+if(! isset($username) and ! isset($_SESSION["username"])){
 	echo "<script>alert('error success')</script>","<script>window.location.replace('http://35.226.43.57/Website-design-2/index.php')</script>";
 }
 ?>
