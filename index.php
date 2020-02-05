@@ -139,7 +139,7 @@ input[type=text],input[type=email] ,input[type=password] ,input[type=date]  {
 }
 
 .loader{
-		margin-left: 30%;
+		margin-left: 20%;
 	text-align: center;
 	
 	
