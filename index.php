@@ -494,6 +494,7 @@ var temp1;
             data: {'username' : user,'password': pas},
             success: function(response)
             {
+		    console.log(response);
                 if(response != '1'){
                     alert("username not available or incorrect password")
                     document.getElementsByClassName("inn1")[1].value="";
