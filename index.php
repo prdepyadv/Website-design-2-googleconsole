@@ -456,7 +456,8 @@ return false
 else {
     
 document.getElementsByClassName("spinner-border")[0].style.display = "block";
-document.getElementsByClassName("bttn")[0].style.display = "none";	
+document.getElementsByClassName("bttn1")[0].style.display = "none";
+setTimeout(3000);
 return login_validate();
 
 /*
