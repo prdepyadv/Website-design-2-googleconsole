@@ -246,7 +246,7 @@ fieldset {
 	<a class="top pp"href="https://www.google.com/" title="Home">Home</a>
 	<a class="top pp" onclick='all_image_show()' title="Store">Pic Store</a>
 	<a class="top pp" onclick="all_data_show()" title="Data">Data</a>
-	<a class="top pp" id="wel" style="float:right">Sign Out</a>
+	<a class="top pp" id="wel" style="float:right" onclick="sign_out()">Sign Out</a>
 	
 
 </div>
@@ -325,6 +325,11 @@ Update info (2/2)
             			}
 	    }
         });
+
+function sign_out(){
+<?php session_destroy(); ?>
+window.location.replace('http://35.226.43.57/Website-design-2/index.php')
+}
         
 	
 function hidecont1(){
