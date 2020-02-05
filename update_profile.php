@@ -5,11 +5,8 @@ $id = $_POST["id"];
 $last = $_POST["last"];
 $email = $_POST["email"];
 $dob = $_POST["dob"];
-$Phone = $_POST["Phone"];
+$phone = $_POST["phone"];
 $username = $_POST["username"];
-
-include email_val.php;
-echo mysqli_num_rows($result_e);
 
 if(isset($username)){
 
@@ -22,7 +19,7 @@ if(isset($username)){
 	    }
 	else
 		{
-            $sql="UPDATE Test SET first = '".$first."', last= '".$last."', email= '".$email."', dob = '".$dob."', Phone = '".$Phone."' WHERE id = '".$id."'";
+            $sql="UPDATE Test SET first = '".$first."', last= '".$last."', email= '".$email."', dob = '".$dob."', Phone = '".$phone."' WHERE id = '".$id."'";
 		
 					if($conn->query($sql))
 						{
