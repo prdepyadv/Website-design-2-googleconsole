@@ -30,9 +30,12 @@ if(! isset($username)){
 	
 table, th, td {
   border : .5px solid black;
-	margin-left: auto ;
+  margin-left: auto ;
   margin-right: auto ;
 }
+table, th {
+	align : center;
+	}
 	
 h4 {
 		font-family: 'Gelasio', serif;
