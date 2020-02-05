@@ -1,8 +1,6 @@
 <?php
 session_start(); 
 
-echo "hi";
-
 $username = $_POST['username']; 
 $password = $_POST['password'];
 
