@@ -474,6 +474,7 @@ function editRow(r) {
 		data.append("dob",x[5].innerText);
 		data.append("Phone",x[7].innerText);
 		data.append("username",x[9].innerText);
+		alert(data);
 		$.ajax({
 			    url: 'http://35.226.43.57/Website-design-2/update_profile.php',
 			    type: 'post',
