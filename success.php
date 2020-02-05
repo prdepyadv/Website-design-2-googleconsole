@@ -32,7 +32,7 @@ table, th, td {
   border : .5px solid black;
   margin-left: auto ;
   margin-right: auto ;
-	padding: 5px;
+	padding: 3px;
 }
 table, th {
 	align : center;
