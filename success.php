@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if(! isset($_SESSION["username"])){
+if(empty($_SESSION["username"])){
 	echo "<script>alert('error success')</script>","<script>window.location.replace('http://35.226.43.57/Website-design-2/index.php')</script>";
 }
 $username = $_SESSION["username"];
