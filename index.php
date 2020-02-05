@@ -137,6 +137,10 @@ input[type=text],input[type=email] ,input[type=password] ,input[type=date]  {
   font-family: 'Raleway', sans-serif;
 
 }
+	
+.spinner-border{
+	  display: none;
+	}
 
 .login {
   border-radius: 50px;
@@ -255,6 +259,7 @@ Login</b>
 <input class="inn1" id="pass_word" type="password"  data-toggle="popover" data-trigger="hover" data-content="Enter Password" placeholder="Password" required>
 <br><br>
 <button class="bttn1" type="Submit"><b>Submit</b></button>
+<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>
 <br>
 <br>
 <h4>Not registered yet? <a onclick="uu();">Sign up now!</a></h4>
@@ -364,7 +369,9 @@ alert("Enter Valid DOB");
 return false
 }
 else {
-    
+document.getElementsByClassName("spinner-border")[0].style.display = "block";
+document.getElementsByClassName("bttn")[0].style.display = "none";	
+
 return email_validate();
 
 
