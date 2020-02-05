@@ -38,6 +38,8 @@ th {
 	text-align: center;
 	background-color: black;
 	color: white;
+	font-family : Arial, Helvetica, sans-serif;
+	text-decoration : none;
 	}
 	
 h4 {
