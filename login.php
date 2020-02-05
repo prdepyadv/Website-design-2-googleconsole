@@ -26,6 +26,7 @@ if(isset($username) and isset($password))
 			if($check == true)
 			{
 			$_SESSION["username"] = $username;
+			echo $_SESSION["username"];
 			echo $check;
 			die();
 			}
