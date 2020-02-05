@@ -140,7 +140,26 @@ input[type=text],input[type=email] ,input[type=password] ,input[type=date]  {
 	
 .loader{
 	  display: none;
-	}
+	  height: 0;
+	  width: 0;
+	  padding: 15px;
+	  border: 6px solid #ccc;
+	  border-right-color: #888;
+	  border-radius: 22px;
+	  -webkit-animation: rotate 1s infinite linear;
+	  /* left, top and position just for the demo! */
+	  position: absolute;
+	  left: 50%;
+	  top: 50%;
+}
+
+@-webkit-keyframes rotate {
+  /* 100% keyframe for  clockwise. 
+     use 0% instead for anticlockwise */
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
 
 .login {
   border-radius: 50px;
@@ -260,9 +279,6 @@ Login</b>
 <br><br>
 <button class="bttn1" type="Submit"><b>Submit</b></button>
 <div class="loader">
-	<div class="spinner-border" role="status">
-		<span class="sr-only">Loading...</span>
-	</div>
 </div>
 <br>
 <br>
