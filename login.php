@@ -25,8 +25,9 @@ if(isset($username) and isset($password))
 			$check = password_verify($password,$row["password"]);
 			if($check == true)
 			{
-			echo $check;
 			$_SESSION["username"] = $username;
+			echo $check;
+			die();
 			}
 		}
 
