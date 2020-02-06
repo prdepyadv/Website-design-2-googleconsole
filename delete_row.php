@@ -2,8 +2,8 @@
 
 <?php
 
-	$username = $_POST["username"];
-$id = $_POST["id"];
+session_start();
+$username = $_SESSION["username"];
 if(isset($username)){
 
 $host="35.226.43.57";$dbusername="rooot";$dbpassword="Prdep@123";$dbname="practice";
