@@ -1,6 +1,7 @@
 <?php
 
-	$username = $_POST["username"];
+session_start();
+$username = $_SESSION["username"];
 	$file_name= $_FILES['pic']['name'];
 
 if(isset($username)){
