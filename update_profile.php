@@ -7,7 +7,7 @@ $last = $_POST["last"];
 $email = $_POST["email"];
 $dob = $_POST["dob"];
 $phone = $_POST["Phone"];
-$username = $_SESSION["username"];
+$username = $_POST['username']; 
 
 if(isset($username)){
 
