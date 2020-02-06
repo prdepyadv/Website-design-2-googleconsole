@@ -1,7 +1,8 @@
 <?php
 
 	$phone = $_POST["phone"];
-	$username = $_POST["username"];
+	session_start();
+	$username = $_SESSION["username"];
 
 if(isset($phone) and isset($username)){
 
