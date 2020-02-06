@@ -1,12 +1,13 @@
 <?php
 
+session_start();
 $id = $_POST["id"];
  $first = $_POST["first"];
 $last = $_POST["last"];
 $email = $_POST["email"];
 $dob = $_POST["dob"];
 $phone = $_POST["Phone"];
-$username = $_POST["username"];
+$username = $_SESSION["username"];
 
 if(isset($username)){
 
